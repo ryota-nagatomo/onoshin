@@ -5,7 +5,10 @@
         <div class="cover-inner">
             <div class="cover-contents">
                 <h1>おのしん</h1>
-                <a href="" class="btn btn-success btn-lg">おのしんを始める</a>
+                @if (!Auth::check())
+                    <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg">おのしんを始める</a>
+                @endif
+               
             </div>
         </div>
     </div>
