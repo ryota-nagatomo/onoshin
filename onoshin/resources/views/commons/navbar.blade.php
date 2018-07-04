@@ -13,6 +13,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
+                        <li>{!! link_to_route('users.index', 'Users') !!}</li>
                         <li>
                             <a href="#">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
@@ -29,13 +30,9 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">マイページ</a>
-                                </li>
+                                <li>{!! link_to_route('users.show', 'My profile', ['id' => Auth::id()]) !!}</li>
                                 <li role="separator" class="divider"></li>
-                                <li>
-                                    <a href="{{ route('logout.get') }}">ログアウト</a>
-                                </li>
+                                <li>{!! link_to_route('logout.get', 'Logout') !!}</li>
                             </ul>
                         </li>
                     @else
