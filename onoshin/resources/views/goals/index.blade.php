@@ -1,7 +1,3 @@
-<div class="panel panel-default" style="word-break:break-all;">
-    <div class="panel-heading">
-        <h3 class="panel-title">カテゴリ</h3>
-    </div>
     <div class="panel-body box1">
         <table class="table">
 		    <thead>
@@ -9,6 +5,8 @@
 			        <th>日付</th>
 		        	<th>目標</th>
 			        <th>達成率</th>
+			        <th></th>
+			        <th></th>
 	            </tr>
 	       </thead>
 	       <tbody>
@@ -18,9 +16,16 @@
                     <td>{{ $date }}</td>
                     <td>{{ $goal->content }}</td>
                     <td>{{ $goal->rate }}%</td>
+                    <td>@include('good_user.good_button')</td>
+                    @if (Auth::user()->id == $goal->user_id)
+                    <td>
+                        {!! Form::open(['route' => ['goals.destroy', $goal->id], 'method' => 'delete']) !!}
+                            <button type="submit" class="btn btn-original"><span class='glyphicon glyphicon-trash'></span></button>
+                        {!! Form::close() !!}
+                    </td>
+                    @endif
                 </tr>
                 <?php endforeach; ?>
 	        </tbody>
 	   </table>
     </div>
-</div>

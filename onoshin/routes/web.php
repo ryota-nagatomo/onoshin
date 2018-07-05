@@ -24,3 +24,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
     Route::resource('goals', 'GoalsController', ['only' => ['create','store', 'destroy']]);
 });
+
+Route::group(['prefix' => 'users/{id}'], function () {
+        Route::post('good', 'GoodUserController@store')->name('user.good');
+        Route::delete('ungood', 'GoodUserController@destroy')->name('user.ungood');
+        // Route::get('goodings', 'UsersController@goodings')->name('users.goodings');
+        // Route::get('gooders', 'UsersController@gooders')->name('users.gooders');
+    });
