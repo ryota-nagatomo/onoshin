@@ -13,9 +13,12 @@ class Controller extends BaseController
     
     public function counts($user) {
         $count_goals = $user->goals()->count();
+        $count_goods = $user->goods()->count();
 
         return [
             'count_goals' => $count_goals,
+            'count_goods' => $count_goods,
         ];
     }
 }
+
