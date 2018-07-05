@@ -43,7 +43,9 @@ footer {
     font-weight: bold;
     letter-spacing: 0.15em;
 }
-.cover .btn-success {
+.cover .btn btn-warning btn-lg{
+     
+     margin-top: 110px;
     background-color: #ed486f;
     border-color: #ed486f;
 }
@@ -52,3 +54,4 @@ footer {
  height: 200px;
  overflow-y: scroll;
 }
+
