@@ -1,7 +1,3 @@
-<div class="panel panel-default" style="word-break:break-all;">
-    <div class="panel-heading">
-        <h3 class="panel-title">カテゴリ</h3>
-    </div>
     <div class="panel-body box1">
         <table class="table">
 		    <thead>
@@ -25,4 +21,3 @@
 	        </tbody>
 	   </table>
     </div>
-</div>
