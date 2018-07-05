@@ -6,7 +6,7 @@
             <div class="cover-contents">
                 <h1>おのしん</h1>
                 @if (!Auth::check())
-                    <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg">おのしんを始める</a>
+                    <a href="{{ route('signup.get') }}" class="btn btn-success btn-md">おのしんを始める</a>
                 @endif
                
             </div>
