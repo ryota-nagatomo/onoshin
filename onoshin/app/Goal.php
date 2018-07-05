@@ -12,4 +12,7 @@ class Goal extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function gooded(){
+        return $this->belongsToMany(User::class, 'good_user', 'goal_id', 'user_id')->withTimestamps();
+    }
 }
