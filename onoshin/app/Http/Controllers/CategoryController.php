@@ -4,24 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\User; // add
+use App\Http\Controllers\Controller;
 
-class UsersController extends Controller
+use App\Goal;
+
+
+class CategoryController extends Controller
 {
-   public function index()
-    {
-        $users = User::paginate(10);
+    
+    // 間違えて作ったけどエラーが出るからファイル消さないで！！
+    
+    
+    public function category(){
         
-        return view('users.index', [
-            'users' => $users,
-        ]);
-    }
-    
-    
-    public function show($id)
-    {
         $data = [];
-        $user = User::find($id);
         $english = \DB::table('goals')->where('category', '0')->take(10)->get();
         $own = \DB::table('goals')->where('category', '1')->take(10)->get();
         $people = \DB::table('goals')->where('category', '2')->take(10)->get();
@@ -29,16 +25,12 @@ class UsersController extends Controller
         $other = \DB::table('goals')->where('category', '4')->take(10)->get();
         
         $data = [
-                'user' => $user,
                 'english' => $english,
                 'own' => $own,
                 'people' => $people,
                 'health' => $health,
                 'other' => $other,
             ];
-        
-        $data += $this->counts($user);
-
-        return view('users.show', $data);
+        return view(users.show, $data);
     }
 }
