@@ -17,7 +17,7 @@
             </div>
             <div>
                 @if(count($own) >0)
-                    <div class="panel panel-primary" style="word-break:break-all;">
+                    <div class="panel panel-success" style="word-break:break-all;">
                         <div class="panel-heading">
                             <h3 class="panel-title">自己啓発</h3>
                         </div>
@@ -27,7 +27,7 @@
             </div>
             <div>
                 @if(count($people) >0)
-                    <div class="panel panel-primary" style="word-break:break-all;">
+                    <div class="panel panel-info" style="word-break:break-all;">
                         <div class="panel-heading">
                             <h3 class="panel-title">人間関係</h3>
                         </div>
@@ -37,7 +37,7 @@
             </div>
             <div>
                 @if(count($english) >0)
-                    <div class="panel panel-primary" style="word-break:break-all;">
+                    <div class="panel panel-warning" style="word-break:break-all;">
                         <div class="panel-heading">
                             <h3 class="panel-title">英語</h3>
                         </div>
@@ -47,7 +47,7 @@
             </div>
             <div>
                 @if(count($other) >0)
-                    <div class="panel panel-primary" style="word-break:break-all;">
+                    <div class="panel panel-danger" style="word-break:break-all;">
                         <div class="panel-heading">
                             <h3 class="panel-title">その他</h3>
                         </div>
