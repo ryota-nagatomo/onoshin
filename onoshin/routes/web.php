@@ -23,6 +23,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
     Route::resource('goals', 'GoalsController', ['only' => ['create','store', 'destroy']]);
+    Route::get('goals', 'GoalsController@search')->name('goals.search');
 });
 
 Route::group(['prefix' => 'users/{id}'], function () {

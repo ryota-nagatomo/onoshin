@@ -74,3 +74,8 @@ footer {
 .color-blue{
     color:#FAAC58;
 }
+
+.index-box{
+    height:200px;
+    overflow-y: scroll;
+}

@@ -1,5 +1,5 @@
-    <div class="panel-body box1">
-        <table class="table">
+    <div class="panel-body index-box">
+        <table class="table table-hover">
 		    <thead>
 		        <tr>
 			        <th>日付</th>
