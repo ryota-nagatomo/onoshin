@@ -14,8 +14,8 @@
             </div>
         </aside>
         <div class="col-xs-8">
-            @if (count($goals) > 0)
-                @include('goals.goals', ['goals' => $goals])
+            @if (count($health)+count($people)+count($own)+count($english)+count($other) != 0)
+                @include('goals.goals')
             @endif
         </div>
     </div>
