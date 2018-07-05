@@ -42,7 +42,7 @@ class GoalsController extends Controller
     {
         $this->validate($request, [
             'content' => 'required|max:191',
-             'rate' => 'required',
+             'rate' => 'required|numeric',
             'category' => 'required',
         ]);
 
