@@ -47,3 +47,8 @@ footer {
     background-color: #ed486f;
     border-color: #ed486f;
 }
+
+.box1 {
+ height: 200px;
+ overflow-y: scroll;
+}
