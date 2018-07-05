@@ -15,10 +15,10 @@
                     @if (Auth::check())
                         <li>{!! link_to_route('users.index', 'Users') !!}</li>
                         <li>
-                            <a href="#">
+                            <a href="{{ route('goals.create') }}">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                 Goalを追加
-                              </a>
+                            </a>
                         </li>
 
                         <li class="dropdown">

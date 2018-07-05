@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests;
+
+use App\Goal;    // add
+
 class GoalsController extends Controller
 {
    public function index()
@@ -22,6 +26,16 @@ class GoalsController extends Controller
         }else {
             return view('welcome');
         }
+    }
+    
+    public function create()
+    {
+        $goal = new Goal;
+
+        return view('goals.create', [
+            'goal' => $goal,
+        ]);
+        
     }
     
      public function store(Request $request)
