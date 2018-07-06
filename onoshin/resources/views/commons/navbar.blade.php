@@ -15,6 +15,11 @@
                     @if (Auth::check())
                         <li>{!! link_to_route('users.index', 'Users') !!}</li>
                         <li>
+                            <a href= "{{ route('goals.search')}}">
+                                Goalを検索
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{ route('goals.create') }}">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                 Goalを追加
