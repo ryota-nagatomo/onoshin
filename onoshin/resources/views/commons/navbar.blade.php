@@ -16,6 +16,7 @@
                         <li>{!! link_to_route('users.index', 'Users') !!}</li>
                         <li>
                             <a href= "{{ route('goals.search')}}">
+                                <span class = "glyphicon glyphicon-search" area-hidden="true"></span>
                                 Goalを検索
                             </a>
                         </li>
