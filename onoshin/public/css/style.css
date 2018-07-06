@@ -80,4 +80,7 @@ footer {
 .index-box{
     height:200px;
     overflow-y: scroll;
+    box-shadow: 5px 5px 10px #000;
+    -webkit-box-shadow: 5px 5px 10px #000;
+    -moz-box-shadow: 5px 5px 10px #000;
 }
