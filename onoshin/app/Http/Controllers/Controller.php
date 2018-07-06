@@ -14,10 +14,14 @@ class Controller extends BaseController
     public function counts($user) {
         $count_goals = $user->goals()->count();
         $count_goods = $user->goods()->count();
+        $count_followings = $user->followings()->count();
+        $count_followers = $user->followers()->count();
 
         return [
             'count_goals' => $count_goals,
             'count_goods' => $count_goods,
+            'count_followings' => $count_followings,
+            'count_followers' => $count_followers,
         ];
     }
 }
