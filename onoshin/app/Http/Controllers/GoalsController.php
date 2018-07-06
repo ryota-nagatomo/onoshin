@@ -72,14 +72,14 @@ class GoalsController extends Controller
         $keyword = $request->keyword;
         #クエリ生成
         $query = Goal::query();
-        #もしキーワードがあったら
+        //もしキーワードがあったら
         if(!empty($keyword))
         {
             $query->where('content','like','%'.$keyword.'%');
         }
-        #ページネーション
-        $data = $query->orderBy('created_at','desc')->paginate(10);
-        return view('goals.search')->with('data',$data)
+        //ページネーション
+        $goals = $query->orderBy('created_at','desc')->paginate(10);
+        return view('goals.search')->with('goals',$goals)
         ->with('keyword',$keyword)
         ->with('message','検索結果');
     }

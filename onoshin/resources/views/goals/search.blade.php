@@ -5,7 +5,7 @@
         <div class="row">
             <div class="text-center">
                 <div>
-                    {!! Form::open(['route' => 'goals.search']) !!}
+                    {!! Form::open(['route' => 'goals.search', 'method' => 'get']) !!}
                         <div class="form-group">
                             {!! Form::label('keyword', 'キーワード:') !!}
                             {!! Form::text('keyword', old('keyword'), ['class' => 'form-control','placeholder' => 'キーワードを入力']) !!}
@@ -14,7 +14,8 @@
                     {!! Form::close() !!}
                 </div>
                 <div>
-                    {{ $data->appends(Request::only('keyword'))->links() }}
+                    <p>{{$message}}</p>
+                    @include('goals.search-index', ['goals' => $goals])
                 </div>
             </div>
         </div>
