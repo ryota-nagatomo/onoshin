@@ -1,9 +1,5 @@
 <ul class="media-list">
     <li class="media">
-        <!--後でコンテンツを追加-->
-        <!--<div class="media-left">-->
-        <!--    <img class="media-object img-rounded" src="{{ Gravatar::src($user->name, 50) }}" alt="">-->
-        <!--</div>-->
         <div class="media-body">
             <div>
                 @if(count($health) >0)
@@ -52,6 +48,13 @@
                             <h3 class="panel-title">その他</h3>
                         </div>
                         @include('goals.index', ['goals' => $other])
+                    </div>
+                @endif
+            </div>
+            <div>
+                @if (isset($goal->count))
+                    <div class="panel-footer">
+                        <p class="text-center">{{ $key+1 }}位: {{ $goal->count}} Good</p>
                     </div>
                 @endif
             </div>
