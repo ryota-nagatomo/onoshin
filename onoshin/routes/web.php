@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'WelcomeController@index');
+//toppageの指定　ログインしたらShowページに行くようにコントローラで指定した
 
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
 Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
