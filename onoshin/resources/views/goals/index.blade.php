@@ -6,7 +6,7 @@
 		        	<th>目標</th>
 			        <th>達成率</th>
 			        <th></th>
-			        <th></th>
+	                <th></th>
 	            </tr>
 	       </thead>
 	       <tbody>
