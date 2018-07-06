@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-original navbar-static-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-left" href="/"><img src="{{ secure_asset("images/logo.png") }}" alt="onoshin"></a>
+                <a class="navbar-left" href="/"><img src="{{ secure_asset("images/logo.jpg") }}" alt="onoshin"></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -36,8 +36,8 @@
                             </ul>
                         </li>
                     @else
-                        <li><a href="{{ route('signup.get') }}">新規登録</a></li>
-                        <li><a href="{{ route('login') }}">ログイン</a></li>
+                        <li><a href="{{ route('signup.get') }}"  class="jet">新規登録</a></li>
+                        <li><a href="{{ route('login') }}" class="jet">ログイン</a></li>
                     @endif
                 </ul>
             </div>
