@@ -2,9 +2,10 @@
         <table class="table table-hover">
 		    <thead>
 		        <tr>
-			        <th>日付</th>
+			        <th>ユーザー</th>
 		        	<th>目標</th>
 			        <th>達成率</th>
+			        <th>日付</th>
 			        <th></th>
 			        <th></th>
 	            </tr>
@@ -12,10 +13,12 @@
 	       <tbody>
 	           <?php foreach($goals as $goal): ?>
                 <tr>
+                    <?php $user = $goal->user->name; ?>
                     <?php $date = substr($goal->created_at,0,10); ?>
-                    <td>{{ $date }}</td>
+                    <td>{{ $user }}</td>
                     <td>{{ $goal->content }}</td>
                     <td>{{ $goal->rate }}%</td>
+                    <td>{{ $date }}</td>
                     <td>@include('good_user.good_button')</td>
                     @if (Auth::user()->id == $goal->user_id)
                     <td>

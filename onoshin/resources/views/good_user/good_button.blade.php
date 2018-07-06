@@ -1,9 +1,9 @@
 @if (Auth::user()->is_good($goal->id))
         {!! Form::open(['route' => ['user.ungood', $goal->id], 'method' => 'delete']) !!}
-            {!! Form::submit('Ungood', ['class' => "btn btn-danger "]) !!}
+            <button type="submit" class="btn btn-original"><span class='glyphicon glyphicon-thumbs-up color-blue'></span></button>
         {!! Form::close() !!}
     @else
         {!! Form::open(['route' => ['user.good', $goal->id]]) !!}
-            {!! Form::submit('Good', ['class' => "btn btn-primary "]) !!}
+            <button type="submit" class="btn btn-original"><span class='glyphicon glyphicon-thumbs-up'></span></button>
         {!! Form::close() !!}
-    @endif
+@endif

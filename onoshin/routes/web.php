@@ -27,6 +27,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('good', 'GoodUserController@good')->name('good_user.good');
     Route::delete('want', 'GoodUserController@ungood')->name('item_user.dont_want');
     Route::resource('goals', 'GoalsController', ['only' => ['create','store', 'destroy']]);
+    Route::get('goals', 'GoalsController@search')->name('goals.search');
 });
 
 Route::group(['prefix' => 'users/{id}'], function () {
