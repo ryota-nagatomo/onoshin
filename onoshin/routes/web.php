@@ -25,13 +25,16 @@ Route::get('ranking/good', 'RankingController@good')->name('ranking.good');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
-    Route::post('good', 'GoodUserController@good')->name('good_user.good');
-    Route::delete('want', 'GoodUserController@ungood')->name('item_user.dont_want');
+    
+    Route::group(['prefix' => 'users/{id}'], function () {
+        Route::post('good', 'GoodUserController@store')->name('user.good');
+        Route::delete('ungood', 'GoodUserController@destroy')->name('user.ungood');
+        Route::post('follow', 'UserFollowController@store')->name('user.follow');
+        Route::delete('unfollow', 'UserFollowController@destroy')->name('user.unfollow');
+        Route::get('followings', 'UsersController@followings')->name('users.followings');
+        Route::get('followers', 'UsersController@followers')->name('users.followers');
+    });
+
     Route::resource('goals', 'GoalsController', ['only' => ['create','store', 'destroy']]);
     Route::get('goals', 'GoalsController@search')->name('goals.search');
 });
-
-Route::group(['prefix' => 'users/{id}'], function () {
-        Route::post('good', 'GoodUserController@store')->name('user.good');
-        Route::delete('ungood', 'GoodUserController@destroy')->name('user.ungood');
-    });
