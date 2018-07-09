@@ -1,44 +1,87 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="search">
+    <div class="container">
         <div class="row">
-            <div class="text-center">
-                {!! Form::open(['route' => 'goals.store']) !!}
-                    <div class="form-group">
-                        {!! Form::label('content', '目標:') !!}
-                        {!! Form::text('content', old('content'), ['class' => 'form-control','placeholder' => 'Smart Goalを入力']) !!}
-                    </div>
-                    <div class="form-group">
-                        {!! Form::label('rate', '達成率:') !!}
-                        {!! Form::text('rate', old('rate'), ['class' => 'form-control','placeholder' => '半角数字を入力']) !!}%
-                            <!--'' => '%',-->
-                            <!--'0' => '0',-->
-                            <!--'1' => '10',-->
-                            <!--'2' => '20',-->
-                            <!--'3' => '30',-->
-                            <!--'4' => '40',-->
-                            <!--'5' => '50',-->
-                            <!--'6' => '60',-->
-                            <!--'7' => '70',-->
-                            <!--'8' => '80',-->
-                            <!--'9' => '90',-->
-                            <!--'10' => '100',-->
-                            <!--'11' => '>100',], null, ['class' => 'form-control'])!!}-->
-                    </div>
-                    <div class="form-group">
-                        {!! Form::label('category', 'カテゴリー:') !!}
-                        {!! Form::select('category', [
-                            '' => 'カテゴリを選択',
-                            '0' => '英語',
-                            '1' => '自己啓発',
-                            '2' => '人間関係',
-                            '3' => '健康管理',
-                            '4' =>'その他'], null, ['class' => 'form-control'])!!}      
-                        <!--カテゴリはまた考える-->
-                    </div>
-                        {!! Form::submit('Post', ['class' => 'btn btn-primary btn-block']) !!}
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="text-center">
+                    {!! Form::open(['route' => 'goals.store']) !!}
+                        <div class="form-group row">
+                            <span class="col-xs-2">{!! Form::label('content', 'Smart Goal:') !!}</span>
+                            <span class="col-xs-10">{!! Form::text('content', old('content'), ['class' => 'form-control','placeholder' => 'Smart Goalを入力']) !!}</span>
+                        </div>
+                        <div class="form-group row">
+                             <span class="col-xs-2">{!! Form::label('rate', 'Acheivement Rate (%):') !!}</span>
+                            <span class="col-xs-10">{!! Form::text('rate', old('rate'), ['class' => 'form-control','placeholder' => '半角数字を入力']) !!}</span>
+                        </div>
+                        <div class="form-group row">
+                             <span class="col-xs-2">{!! Form::label('category', 'Category:') !!}</span>
+                            <span class="col-xs-10">{!! Form::select('category', [
+                                '' => 'カテゴリを選択',
+                                '0' => '英語',
+                                '1' => '自己啓発',
+                                '2' => '人間関係',
+                                '3' => '健康管理',
+                                '4' =>'その他'], null, ['class' => 'form-control'])!!}      </span>
+                            <!--カテゴリはまた考える-->
+                        </div>
+                        <div class="hidden_box">
+                            <label for="label1" class="hidden_box_label">二個目の目標の登録</label>
+                            <input type="checkbox" id="label1" class="hidden_box_input" />
+
+                        <div class="hidden_show">
+                            <!--非表示ここから-->     
+                                <div class="form-group row">
+                                    <span class="col-xs-2">{!! Form::label('content2', 'Smart Goal:') !!}</span>
+                                    <span class="col-xs-10">{!! Form::text('content2', old('content2'), ['class' => 'form-control','placeholder' => 'Smart Goalを入力']) !!}</span>
+                                </div>
+                                <div class="form-group row">
+                                    <span class="col-xs-2">{!! Form::label('rate2', 'Achievement rate (%):') !!}</span>
+                                    <span class="col-xs-10">{!! Form::text('rate2', old('rate2'), ['class' => 'form-control','placeholder' => '半角数字を入力']) !!}</span>
+                                </div>
+                                <div class="form-group row">
+                                    <span class="col-xs-2">{!! Form::label('category2', 'Category:') !!}</span>
+                                    <span class="col-xs-10">{!! Form::select('category2', [
+                                        '' => 'カテゴリを選択',
+                                        '0' => '英語',
+                                        '1' => '自己啓発',
+                                        '2' => '人間関係',
+                                        '3' => '健康管理',
+                                        '4' =>'その他'], null, ['class' => 'form-control'])!!}</span>
+                                </div>
+                                <!--ここまで-->
+                            </div>
+                            <div class="hidden_box">
+                                <label for="label2" class="hidden_box_label">三個目の目標の登録</label>
+                                <input type="checkbox" id="label2" class="hidden_box_input" />
+
+                                <div class="hidden_show">
+                                    <!--非表示ここから-->     
+                                    <div class="form-group row">
+                                        <span class="col-xs-2">{!! Form::label('content3', 'Smart Goal:') !!}</span>
+                                        <span class="col-xs-10">{!! Form::text('content3', old('content3'), ['class' => 'form-control','placeholder' => 'Smart Goalを入力']) !!}</span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <span class="col-xs-2">{!! Form::label('rate3', 'Achievement rate (%):') !!}</span>
+                                        <span class="col-xs-10">{!! Form::text('rate3', old('rate3'), ['class' => 'form-control','placeholder' => '半角数字を入力']) !!}</span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <span class="col-xs-2">{!! Form::label('category3', 'Category:') !!}</span>
+                                        <span class="col-xs-10">{!! Form::select('category3', [
+                                            '' => 'カテゴリを選択',
+                                            '0' => '英語',
+                                            '1' => '自己啓発',
+                                            '2' => '人間関係',
+                                            '3' => '健康管理',
+                                            '4' =>'その他'], null, ['class' => 'form-control'])!!}</span>
+                                    </div>
+                                    <!--ここまで-->
+                                </div>
+                            </div>
+                        </div>
+                        {!! Form::submit('Register', ['class' => 'btn btn-primary btn-block']) !!}
                     {!! Form::close() !!}
+                </div>
             </div>
         </div>
     </div>

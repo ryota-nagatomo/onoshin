@@ -4,17 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class GoodUserController extends Controller
+class UserFollowController extends Controller
 {
     public function store(Request $request, $id)
     {
-        \Auth::user()->good($id);
+        \Auth::user()->follow($id);
         return redirect()->back();
     }
 
     public function destroy($id)
     {
-        \Auth::user()->ungood($id);
+        \Auth::user()->unfollow($id);
         return redirect()->back();
     }
 }
