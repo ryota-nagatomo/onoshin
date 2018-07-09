@@ -3,7 +3,8 @@
 @foreach ($users as $user)
     <li class="media">
         <div class="media-left">
-            <img class="media-object img-rounded" src="{{ Gravatar::src($user->name, 50) }}" alt="">
+            <!--ここにレーダーチャートを追加？-->
+            <!--<img class="media-object img-rounded" src="{{ Gravatar::src($user->name, 50) }}" alt="">-->
         </div>
         <div class="media-body">
             <div>
