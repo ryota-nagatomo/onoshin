@@ -6,7 +6,7 @@
 			        <th>日付</th>
 		        	<th>目標</th>
 			        <th>達成率</th>
-			        <th>Good</th>
+			        <th></th>
 			        <th>Ranking</th>
 	            </tr>
 	       </thead>
