@@ -53,8 +53,8 @@
                             </ul>
                         </li>
                     @else
-                        <li><a href="{{ route('signup.get') }}"  class="jet">新規登録</a></li>
-                        <li><a href="{{ route('login') }}" class="jet">ログイン</a></li>
+                        <li><a href="{{ route('signup.get') }}"  class="jet">sign up</a></li>
+                        <li><a href="{{ route('login') }}" class="jet">login</a></li>
                     @endif
                 </ul>
             </div>
