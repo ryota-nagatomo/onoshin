@@ -146,3 +146,10 @@ a.jet {
 .registration{
      background: #fff;
 }
+
+.goals_template {
+    padding: 10px;
+    border: 3px outset #cccccc;
+    border-color: #337ab7;
+    border-radius: 10px 60px 10px 60px;
+}
