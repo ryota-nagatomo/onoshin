@@ -1,58 +1,58 @@
 @charset "utf-8";
 
-/* body */
-/*body {*/
-/*    background: #f2f2f2;*/
-/*}*/
-/*footer {*/
-/*    margin-top: 40px;*/
-/*}*/
+ body 
+body {
+    background: #f2f2f2;
+}
+footer {
+    margin-top: 40px;
+}
 
-/* navbar */
-/*.navbar {*/
-/*    background-color: #f6ae54;*/
-/*}*/
-/*.navbar-header img {*/
-/*    margin-top: 5px;*/
-/*    height: 40px;*/
-/*}*/
+ navbar 
+.navbar {
+    background-color: #f6ae54;
+}
+.navbar-header img {
+    margin-top: 5px;
+    height: 40px;
+}
 
-/* cover */
-/*.cover {*/
-/*    margin-top: -20px;*/
-/*    margin-bottom: 20px;*/
-/*    width: 100%;*/
-/*    height: 1000px;*/
-/*    background: url("/images/images.jpg") center center no-repeat;*/
-/*    background-size: cover;*/
-/*}*/
-/*.cover .cover-inner {*/
-/*    height: 100%;*/
-/*    margin: auto;*/
-/*    display: table;*/
-/*}*/
-/*.cover .cover-inner .cover-contents {*/
-/*    display: table-cell;*/
-/*    vertical-align: middle;*/
-/*    text-align: center;*/
-/*    position: relative;*/
+ cover 
+.cover {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 1000px;
+    background: url("/images/images.jpg") center center no-repeat;
+    background-size: cover;
+}
+.cover .cover-inner {
+    height: 100%;
+    margin: auto;
+    display: table;
+}
+.cover .cover-inner .cover-contents {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
 
-/*}*/
+}
 
-/*.cover .cover-inner .cover-contents h1 {*/
+.cover .cover-inner .cover-contents h1 {
     
-/*    margin: 80px 0px 20px 80px;*/
-/*    padding:1px 15px;*/
-/*    color: white;*/
-/*    font-size: 75px;*/
-/*    font-weight: bold;*/
-/*    letter-spacing: 0.08em;*/
-/*    background:black;*/
-    /*box-shadow: 0px 0px 0px 5px #FFCC99;*/
+    margin: 80px 0px 20px 80px;
+    padding:1px 15px;
+    color: white;
+    font-size: 75px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    background:black;
+    box-shadow: 0px 0px 0px 5px #FFCC99;
    
-    /*border-radius: 35px;*/
-/*  font-family: 'Constantia',sans-serif;*/
-/*}*/
+    border-radius: 35px;
+    font-family: 'Constantia',sans-serif;
+}
 .btn-original{
     background:none;
     border:none
@@ -144,7 +144,7 @@ a.jet {
     opacity: 1;
 }
 
-
+/*ここらへんからIsseiの教えてくれたやつ*/
 
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -184,7 +184,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 main,
@@ -581,7 +580,7 @@ th {
 html {
   font-size: 62.5%;
 }
-body {
+body.top {
  background: url("/images/images2.jpg") center center no-repeat;
   background-size: cover;
   color: #fff;
@@ -745,15 +744,6 @@ body {
    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Constantia',sans-serif;
   font-weight: bold;
   font-size:20px;
-}
-
-/* --------------------------------
- * footer
- * -------------------------------- */
-.footer {
-  padding: 12px 0;
-  font-size: 1.3rem;
-  color：#fff;
 }
 
 

@@ -2,7 +2,7 @@
 
 @section('cover')
 
-        <body>
+<body class='top'>
         
          
   <header class="header">
