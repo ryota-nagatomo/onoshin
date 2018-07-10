@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div style='font-family:"Constantia","ＭＳ 明朝",serif; font-weight:bolder; text-align:center'>
+<div class='page_title'>
     <h1 style="font-size:50pt">Smart Goals</h1>
     
     <h2>Membership Registration</h2>

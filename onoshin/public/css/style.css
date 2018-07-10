@@ -830,9 +830,18 @@ body {
      background: #fff;
 }
 
+<<<<<<< HEAD
 .goals_template {
     padding: 10px;
     border: 3px outset #cccccc;
     border-color: #337ab7;
     border-radius: 10px 60px 10px 60px;
 }}
+=======
+.page_title
+{
+    font-family:"Constantia","ＭＳ 明朝",serif;
+    font-weight:bolder;
+    text-align:center;
+}
+>>>>>>> origin/master

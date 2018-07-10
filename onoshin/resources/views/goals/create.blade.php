@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class='page_title'>
+        <h1>Goals Setting</h1>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
