@@ -828,5 +828,11 @@ body {
 
 .registration{
      background: #fff;
+}
 
+.page_title
+{
+    font-family:"Constantia","ＭＳ 明朝",serif;
+    font-weight:bolder;
+    text-align:center;
 }
