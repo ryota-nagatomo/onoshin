@@ -23,19 +23,19 @@ class WelcomeController extends Controller
             $user = \Auth::user();
             $id = $user->id;
             $data = [];
-            $english = \DB::table('goals')->where('user_id', $id)->where('category', '0')->take(10)->get();
-            $own = \DB::table('goals')->where('user_id', $id)->where('category', '1')->take(10)->get();
-            $people = \DB::table('goals')->where('user_id', $id)->where('category', '2')->take(10)->get();
+            $study = \DB::table('goals')->where('user_id', $id)->where('category', '0')->take(10)->get();
+            $private = \DB::table('goals')->where('user_id', $id)->where('category', '1')->take(10)->get();
+            $communication = \DB::table('goals')->where('user_id', $id)->where('category', '2')->take(10)->get();
             $health = \DB::table('goals')->where('user_id', $id)->where('category', '3')->take(10)->get();
-            $other = \DB::table('goals')->where('user_id', $id)->where('category', '4')->take(10)->get();
+            $work = \DB::table('goals')->where('user_id', $id)->where('category', '4')->take(10)->get();
         
             $data = [
                 'user' => $user,
-                'english' => $english,
-                'own' => $own,
-                'people' => $people,
+                'study' => $study,
+                'private' => $private,
+                'communication' => $communication,
                 'health' => $health,
-                'other' => $other,
+                'work' => $work,
             ];
         
         $data += $this->counts($user);

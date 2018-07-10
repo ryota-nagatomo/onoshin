@@ -146,6 +146,7 @@ a.jet {
 
 
 
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 /**
@@ -678,7 +679,7 @@ body {
 
 /* --------------------------------
  * about
- * -------------------------------- */
+* -------------------------------- */
 .about {
   padding: 80px 30px;
   background-color:#eae8e1;
@@ -824,4 +825,8 @@ body {
     padding-bottom: 80px;
   }
  
+
+.registration{
+     background: #fff;
+
 }

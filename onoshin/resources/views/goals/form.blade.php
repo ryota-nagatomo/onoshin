@@ -10,10 +10,9 @@
     {!! Form::label('category', 'カテゴリー:') !!}
     {!! Form::select('category', [
         '' => 'カテゴリを選択',
-        '0' => '英語',
-        '1' => '自己啓発',
-        '2' => '人間関係',
-        '3' => '健康管理',
-        '4' =>'その他'], null, ['class' => 'form-control'])!!}      
-        <!--カテゴリはまた考える-->
+        '0' => 'Study',
+        '1' => 'Private',
+        '2' => 'Communication',
+        '3' => 'Health',
+        '4' =>'Work'], null, ['class' => 'form-control'])!!}      
 </div>
