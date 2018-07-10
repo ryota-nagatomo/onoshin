@@ -5,49 +5,49 @@
                 @if(count($health) >0)
                     <div class="panel panel-primary" style="word-break:break-all;">
                         <div class="panel-heading">
-                            <h3 class="panel-title">健康管理</h3>
+                            <h3 class="panel-title">Health</h3>
                         </div>
                         @include('goals.index', ['goals' => $health])
                     </div>
                 @endif
             </div>
             <div>
-                @if(count($own) >0)
+                @if(count($private) >0)
                     <div class="panel panel-success" style="word-break:break-all;">
                         <div class="panel-heading">
-                            <h3 class="panel-title">自己啓発</h3>
+                            <h3 class="panel-title">Private</h3>
                         </div>
-                        @include('goals.index', ['goals' => $own])
+                        @include('goals.index', ['goals' => $private])
                     </div>
                 @endif
             </div>
             <div>
-                @if(count($people) >0)
+                @if(count($communication) >0)
                     <div class="panel panel-info" style="word-break:break-all;">
                         <div class="panel-heading">
-                            <h3 class="panel-title">人間関係</h3>
+                            <h3 class="panel-title">Communication</h3>
                         </div>
-                        @include('goals.index', ['goals' => $people])
+                        @include('goals.index', ['goals' => $communication])
                     </div>
                 @endif
             </div>
             <div>
-                @if(count($english) >0)
+                @if(count($study) >0)
                     <div class="panel panel-warning" style="word-break:break-all;">
                         <div class="panel-heading">
-                            <h3 class="panel-title">英語</h3>
+                            <h3 class="panel-title">Study</h3>
                         </div>
-                        @include('goals.index', ['goals' => $english])
+                        @include('goals.index', ['goals' => $study])
                     </div>
                 @endif
             </div>
             <div>
-                @if(count($other) >0)
+                @if(count($work) >0)
                     <div class="panel panel-danger" style="word-break:break-all;">
                         <div class="panel-heading">
-                            <h3 class="panel-title">その他</h3>
+                            <h3 class="panel-title">Work</h3>
                         </div>
-                        @include('goals.index', ['goals' => $other])
+                        @include('goals.index', ['goals' => $work])
                     </div>
                 @endif
             </div>
