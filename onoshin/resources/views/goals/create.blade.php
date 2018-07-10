@@ -24,6 +24,7 @@
                                 '3' => 'Health',
                                 '4' =>'Work'], null, ['class' => 'form-control'])!!}      </span>
                         </div>
+                        
                         <div class="hidden_box">
                             <label for="label1" class="hidden_box_label">二個目の目標の登録</label>
                             <input type="checkbox" id="label1" class="hidden_box_input" />
@@ -50,6 +51,7 @@
                                 </div>
                                 <!--ここまで-->
                             </div>
+                            
                             <div class="hidden_box">
                                 <label for="label2" class="hidden_box_label">三個目の目標の登録</label>
                                 <input type="checkbox" id="label2" class="hidden_box_input" />
