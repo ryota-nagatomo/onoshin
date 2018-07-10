@@ -18,12 +18,11 @@
                              <span class="col-xs-2">{!! Form::label('category', 'Category:') !!}</span>
                             <span class="col-xs-10">{!! Form::select('category', [
                                 '' => 'カテゴリを選択',
-                                '0' => '英語',
-                                '1' => '自己啓発',
-                                '2' => '人間関係',
-                                '3' => '健康管理',
-                                '4' =>'その他'], null, ['class' => 'form-control'])!!}      </span>
-                            <!--カテゴリはまた考える-->
+                                '0' => 'Study',
+                                '1' => 'Private',
+                                '2' => 'Communication',
+                                '3' => 'Health',
+                                '4' =>'Work'], null, ['class' => 'form-control'])!!}      </span>
                         </div>
                         <div class="hidden_box">
                             <label for="label1" class="hidden_box_label">二個目の目標の登録</label>
@@ -43,11 +42,11 @@
                                     <span class="col-xs-2">{!! Form::label('category2', 'Category:') !!}</span>
                                     <span class="col-xs-10">{!! Form::select('category2', [
                                         '' => 'カテゴリを選択',
-                                        '0' => '英語',
-                                        '1' => '自己啓発',
-                                        '2' => '人間関係',
-                                        '3' => '健康管理',
-                                        '4' =>'その他'], null, ['class' => 'form-control'])!!}</span>
+                                        '0' => 'Study',
+                                        '1' => 'Private',
+                                        '2' => 'Communication',
+                                        '3' => 'Health',
+                                        '4' =>'Work'], null, ['class' => 'form-control'])!!}</span>
                                 </div>
                                 <!--ここまで-->
                             </div>
@@ -69,11 +68,11 @@
                                         <span class="col-xs-2">{!! Form::label('category3', 'Category:') !!}</span>
                                         <span class="col-xs-10">{!! Form::select('category3', [
                                             '' => 'カテゴリを選択',
-                                            '0' => '英語',
-                                            '1' => '自己啓発',
-                                            '2' => '人間関係',
-                                            '3' => '健康管理',
-                                            '4' =>'その他'], null, ['class' => 'form-control'])!!}</span>
+                                            '0' => 'Study',
+                                            '1' => 'Private',
+                                            '2' => 'Commmunication',
+                                            '3' => 'Health',
+                                            '4' =>'Work'], null, ['class' => 'form-control'])!!}</span>
                                     </div>
                                     <!--ここまで-->
                                 </div>
