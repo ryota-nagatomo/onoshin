@@ -74,6 +74,11 @@ class GoalsController extends Controller
             'category' => $request->category,
         ]);
         
+        $data = [
+        'content' => $request->content,
+        'rate' => $request->rate,
+        ];
+        
         //二個目のフォームに全部入っていたら保存
         if(isset($request->content2) && isset($request->category2) && isset($request->rate2))
         {
@@ -82,6 +87,7 @@ class GoalsController extends Controller
             'rate' => $request->rate2,
             'category' => $request->category2,
         ]); 
+            $data += ['content2' => $request->content2, 'rate2' => $request->rate2,];
         }
 
         //三個目のフォームに全部入っていたら保存        
@@ -92,9 +98,10 @@ class GoalsController extends Controller
             'rate' => $request->rate3,
             'category' => $request->category3,
         ]); 
+            $data += ['content3' => $request->content3, 'rate3' => $request->rate3,];
         }
-
-        return redirect('/');
+        
+        return view('goals.template', $data);
     }
     
      public function destroy($id)
