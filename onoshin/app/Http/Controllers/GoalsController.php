@@ -117,8 +117,14 @@ class GoalsController extends Controller
     
     public function search(Request $request)
     {
-        //キーワード受け取り
+        //キーワードなど受け取り
         $keyword = $request->keyword;
+        $category = $request->category;
+        $rate = $request->rate;
+        $relate = $request->relate;
+        $day = $request->day;
+        $user = $request->user;
+        $relate2 = $request->relate2;
         #クエリ生成
         $query = Goal::query();
         //もしキーワードがあったら
@@ -126,6 +132,38 @@ class GoalsController extends Controller
         {
             $query->where('content','like','%'.$keyword.'%');
         }
+        //もしカテゴリがあったら
+        if(!empty($category))
+        {
+            $query->where('category', $category);
+        }
+        //もしＲａｔｅがあったら
+        if(!empty($rate))
+        {
+            if($relate == '0'){
+                $query->where('rate', $rate);
+            }
+            if($relate == '1'){
+                $query->where('rate', '>=', $rate);
+            }
+            if($relate == '2'){
+                $query->where('rate', '<=', $rate);
+            }
+        }
+        //もし日付があったら
+        if(!empty($day))
+        {
+            if($relate2 == '0'){
+                $query->where('created_at', $day);
+            }
+            if($relate2 == '1'){
+                $query->where('created_at', '>=', $day);
+            }
+            if($relate2 == '2'){
+                $query->where('created_at', '<=', $day);
+            }
+        }
+        
         //ページネーション
         $goals = $query->orderBy('created_at','desc')->paginate(10);
         return view('goals.search')->with('goals',$goals)
