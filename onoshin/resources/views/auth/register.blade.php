@@ -11,7 +11,7 @@
 <div class="row">
     <div class="col-xs-offset-3 col-xs-6">
         <div class="panel panel-default">
-            <div class="panel-heading">Please fill in the following necessary infomations</div>
+            <div class="panel-heading" style="font-size:large">Please fill in the following necessary infomations.</div>
             <div class="panel-body">
                 {!! Form::open(['route' => 'signup.post']) !!}
                     <div class="form-group">
