@@ -32,7 +32,7 @@
                         /*現在の日付の曜日の番号を出力する*/
                         $date = date('w');
                         if ($date == 1) {
-                            echo "a";
+                            echo "Good work $usesr->name! It was a great start of this week!";
                         }
                         elseif ($date == 2){
                             echo "b";
@@ -44,7 +44,7 @@
                             echo "d";
                         }
                         elseif ($date == 5){
-                            echo "e";
+                            echo "TGIF!! Have a great weekend :-)";
                         }
                         else{
                             echo "休めよ";
