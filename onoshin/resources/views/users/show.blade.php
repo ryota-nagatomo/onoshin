@@ -7,10 +7,90 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">{{ $user->name }}</h3>
                 </div>
-                <!--後でコンテンツを追加-->
-                <!--<div class="panel-body">-->
-                <!--    <img class="media-object img-rounded img-responsive" src="{{ Gravatar::src($user->name, 500) }}" alt="">-->
-                <!--</div>-->
+                <div class="panel-body">
+                   <!-- チャート描画キャンバス -->
+                  <div><canvas id="myChart" height="500px" width="300px"></canvas></div>
+                  <script>
+
+                    // 色の設定
+                    var colorSet = {
+                        	red: 'rgb(255, 99, 132)',
+                         	orange: 'rgb(255, 159, 64)',
+	                        yellow: 'rgb(255, 205, 86)',
+                         	green: 'rgb(75, 192, 192)',
+                         	blue: 'rgb(54, 162, 235)',
+                         	purple: 'rgb(153, 102, 255)',
+                         	grey: 'rgb(201, 203, 207)'
+                    };
+
+                    
+
+                    // 色のRGB変換
+                    var color = Chart.helpers.color;
+
+                    /*
+                    * チャートの初期設定
+                     */
+                    var config = {
+                        	type: 'radar',
+                         	data: {
+	                       	labels: ["health", "work", "study", "private", "communication"],
+	                 	    datasets: [{
+		                  	label: "last week",
+			                backgroundColor: color(colorSet.red).alpha(0.5).rgbString(),
+		           	        borderColor: colorSet.red,
+			                pointBackgroundColor: colorSet.red,
+			                data: ['avg_health' ,'avg_work','avg_study','avg_private' ,'avg_communication' ]
+	            	},{
+		                	label: "this week",
+			                backgroundColor: color(colorSet.blue).alpha(0.5).rgbString(),
+			                borderColor: colorSet.blue,
+			                pointBackgroundColor: colorSet.blue,
+			                data: [100, 90, 80, 70, 60]
+	              	},]
+	                },
+                        	options: {
+	                     	animation:false,
+		                    showTooltips: false,
+	                    	legend: { position: 'bottom' },
+		        title: {
+		                	display: true,
+		                 	fontSize:20,
+			                fontColor:'#666',
+			                text: 'Accomplishment'
+		                },
+	         	scale: {
+			                display: true,
+			                pointLabels: {
+				            fontSize: 15,
+				            fontColor: colorSet.yellow
+			           },
+			    ticks: {
+			 	            display: true,
+				            fontSize: 12,
+				            fontColor: colorSet.green,
+			 	            min: 0,
+				            max: 100,
+				            beginAtZero: true
+			           },
+		 	    gridLines: {
+				            display: true,
+				            color: colorSet.yellow
+		            	}
+		}
+	}
+};
+
+           /*
+           * チャートの作成
+           */
+           var myRadar = new Chart($("#myChart"), config);
+
+
+
+           </script>
+
+                </div>
             </div>
             @include('user_follow.follow_button', ['user' => $user])
         </aside>
