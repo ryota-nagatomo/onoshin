@@ -40,6 +40,8 @@ class GoalsController extends Controller
     
      public function store(Request $request)
     {
+        $user = \Auth::user();
+        
         //長くなってしまった申し訳ない。工夫は考えます
         $this->validate($request, [
             'content' => 'required|max:191',
@@ -77,6 +79,7 @@ class GoalsController extends Controller
         $data = [
         'content' => $request->content,
         'rate' => $request->rate,
+        'user' => $user
         ];
         
         //二個目のフォームに全部入っていたら保存

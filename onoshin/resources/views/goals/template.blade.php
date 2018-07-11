@@ -28,6 +28,29 @@
                             </p>
                             <?php } ?>
                         </div>
+                    <h4><?php 
+                        /*現在の日付の曜日の番号を出力する*/
+                        $date = date('w');
+                        if ($date == 1) {
+                            echo "a";
+                        }
+                        elseif ($date == 2){
+                            echo "b";
+                        }
+                        elseif ($date == 3){
+                            echo "Good work $user->name! 2 more days to go!!";
+                        }
+                        elseif ($date == 4){
+                            echo "d";
+                        }
+                        elseif ($date == 5){
+                            echo "e";
+                        }
+                        else{
+                            echo "休めよ";
+                        }
+                        ?>
+                    </h4>
                 </div>
             </div>
         </div>
