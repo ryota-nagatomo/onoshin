@@ -43,10 +43,12 @@
                                 </span>
                         </div>
                         {!! Form::submit('Search!', ['class' => 'btn btn-success btn-lg']) !!}
-                    {!! Form::close() !!}
-                    <div>
+                        {!! Form::close() !!}
                         <br>
-                        <p style="font-family:'ＭＳ　ゴシック', sans-serif; font-size:large; font-weight:bold">{{$message}}</p>
+                        <div class="panel panel-primary" style="word-break:break-all;">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" style="font-family:'ＭＳ　ゴシック', sans-serif">Results</h3>
+                            </div>
                         @include('goals.search-index', ['goals' => $goals])
                     </div>
                 </div>
