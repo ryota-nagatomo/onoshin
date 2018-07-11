@@ -121,4 +121,10 @@ class User extends Authenticatable
     public function is_following($userId) {
     return $this->followings()->where('follow_id', $userId)->exists();
     }
+    
+    public function avg($keyword){
+        $sub = User::select('rate')->whereRaw('category',$keyword)->take(5)->toSql;
+        
+        $average = DB::table(DB::raw(" ($sub) as sub "))->avg('rate');
+    }
 }
