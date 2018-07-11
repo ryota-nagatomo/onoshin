@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
                 <div class="text-left">
-                    <h1>Smart Goals Template</h1>
+                    <h1 class='page_title'>Smart Goals Template</h1>
                     <h3>Copy your Smart Goals below & paste it on your Daily Report</h3>
                         <div class="goals_template">
                             <p>1. Goal: {{$content}}<br/>
@@ -32,7 +32,7 @@
                         /*現在の日付の曜日の番号を出力する*/
                         $date = date('w');
                         if ($date == 1) {
-                            echo "a";
+                            echo "Good work $usesr->name! It was a great start of this week!";
                         }
                         elseif ($date == 2){
                             echo "b";
@@ -44,7 +44,7 @@
                             echo "d";
                         }
                         elseif ($date == 5){
-                            echo "e";
+                            echo "TGIF!! Have a great weekend :-)";
                         }
                         else{
                             echo "休めよ";
