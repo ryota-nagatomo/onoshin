@@ -10,36 +10,40 @@
                 </button>
                 <a class="navbar-left" href="/"><img src="{{ secure_asset("images/logo.jpg") }}" alt="onoshin"></a>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse navbar_original" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
-                        <li>{!! link_to_route('users.index', 'Users') !!}</li>
                         <li>
-                            <a href= "{{ route('goals.search')}}">
-                                <span class = "glyphicon glyphicon-search" area-hidden="true"></span>
-                                Goalを検索
+                            <a href= "{{ route('users.index')}}" class="jet">
+                            Users
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('goals.create') }}">
+                            <a href= "{{ route('goals.search')}}" class="jet">
+                                <span class = "glyphicon glyphicon-search" area-hidden="true"></span>
+                                search for Goals
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('goals.create') }}" class="jet">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                Goalを追加
+                                add Goals
                             </a>
                         </li>
                         
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a href="#" class="dropdown-toggle jet" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
-                                ランキング
+                                Ranking
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ route('ranking.good') }}">Goodランキング</a></li>
+                                <li><a href="{{ route('ranking.good') }}" >Good ranking</a></li>
                             </ul>
                         </li>
                         
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a href="#" class="dropdown-toggle jet" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <span class="gravatar">
                                     <img src="{{ Gravatar::src(Auth::user()->name, 20) . '&d=mm' }}" alt="" class="img-circle">
                                 </span>
