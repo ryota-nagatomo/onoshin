@@ -1,4 +1,4 @@
- <div class="panel-body box1">
+ <div class="panel-body index-box">
         <table class="table">
 		    <thead>
 		        <tr>
