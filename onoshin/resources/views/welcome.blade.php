@@ -28,13 +28,13 @@
   </section>
 
   <section class="skills">
-    <h2 class="heading">HOW TO USE</h2>
+    <h2 class="heading">WHAT YOU CAN</h2>
     <div class="skills-wrapper">
       <div class="skill-box">
         <i class="skill-icon fa fa-lightbulb-o"></i>
         <div class="skill-title">GRAPH</div>
         <p class="skill-text">
-          Ⅰ，グラフでわかる達成度<br>
+          Ⅰ.グラフでわかる達成度<br>
           毎日のSmartGoalの達成度をグラフで確認して<br>
           モチベーションアップ!!
         </p>
@@ -43,7 +43,7 @@
         <i class="skill-icon fa fa-paint-brush"></i>
         <div class="skill-title">SEARCH</div>
         <p class="skill-text">
-         Ⅱ，自己成長につなげる<br> 
+         Ⅱ.自己成長につなげる<br> 
          目標にしたい同期のSmartGoalや<br>
           同期が頑張っていることを参考にできる<br>
           
@@ -53,7 +53,7 @@
         <i class="skill-icon fa fa-code"></i>
         <div class="skill-title">EFFICIENCY</div>
         <p class="skill-text">
-         Ⅲ， 日報作成の効率化<br>
+         Ⅲ. 日報作成の効率化<br>
          他の日と比較しながら今日のSmartGoalを決めて<br>
           スムーズに日報作成
          
