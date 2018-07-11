@@ -14,7 +14,7 @@
 
         <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
     </head>
-    <body>
+    <body style="background-color: #f2f2f2">
         @include('commons.navbar')
 
         @yield('cover')
