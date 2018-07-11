@@ -28,12 +28,11 @@ class UsersController extends Controller
         $communication = \DB::table('goals')->where('user_id', $id)->where('category', '2')->take(10)->get();
         $health = \DB::table('goals')->where('user_id', $id)->where('category', '3')->take(10)->get();
         $work = \DB::table('goals')->where('user_id', $id)->where('category', '4')->take(10)->get();
-        $avg_study = $user->avg(0);
-        $avg_private = $user->avg(1);
-        $avg_communication = $user->avg(2);
-        $avg_health = $user->avg(3);
-        $avg_work = $user->avg(4);
-        $ab = 'ab';
+        $avg_study = $user->avg(0, $id);
+        $avg_private = $user->avg(1, $id);
+        $avg_communication = $user->avg(2, $id);
+        $avg_health = $user->avg(3, $id);
+        $avg_work = $user->avg(4, $id);
         
         $data = [
                 'user' => $user,
