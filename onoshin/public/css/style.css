@@ -2,10 +2,12 @@
 
  body 
 body {
-    background: #f2f2f2;
+    background-color: #f2f2f2;
+    margin: 0;
 }
 footer {
     margin-top: 40px;
+    
 }
 
  navbar 
@@ -116,6 +118,7 @@ a.jet {
     font-weight: bold;
     border: solid 2px black;
     cursor :pointer;
+    background-color: #FFF;
 }
 
 /*ボタンホバー時*/
@@ -144,6 +147,19 @@ a.jet {
     opacity: 1;
 }
 
+
+.registration{
+     background: #fff;
+}
+
+.page_title
+{
+    font-family:"Constantia","ＭＳ 明朝",serif;
+    font-weight:bolder;
+    text-align:center;
+}
+
+
 /*ここらへんからIsseiの教えてくれたやつ*/
 
 
@@ -165,9 +181,6 @@ html {
  * Remove default margin.
  */
 
-body {
-  margin: 0;
-}
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -580,13 +593,14 @@ th {
 html {
   font-size: 62.5%;
 }
-body.top {
+.top {
  background: url("/images/images2.jpg") center center no-repeat;
   background-size: cover;
   color: #fff;
   text-align: center;
   font-size: 1.4rem;
   font-family: 'Constantia',sans-serif;
+  margin-top: -20px;
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -644,7 +658,7 @@ body.top {
 /* --------------------------------
  * header
  * -------------------------------- */
-.header {
+.main-top {
   padding: 170px 30px 80px;
 }
 .site-title-sub {
@@ -768,7 +782,7 @@ body.top {
   }
 
   /* --- header --- */
-  .header {
+  .main-top {
     padding-top: 60px;
   }
   .site-title-sub {
@@ -814,15 +828,4 @@ body.top {
   .contact {
     padding-bottom: 80px;
   }
- 
-
-.registration{
-     background: #fff;
-}
-
-.page_title
-{
-    font-family:"Constantia","ＭＳ 明朝",serif;
-    font-weight:bolder;
-    text-align:center;
 }

@@ -2,17 +2,17 @@
 
 @section('cover')
 
-<body class='top'>
+<div class='top'>
         
          
-  <header class="header">
+  <section class="main-top">
     <p class="site-title-sub">Welcome to SmartGoals</p>
     <h1 class="site-title">     YOUR GOAL IS...</h1>
     <div class="buttons">
       <a class="button" href="#about">LEARN MORE</a>
       <a class="button button-showy" href="#contact">ABOUT US</a>
     </div>
-  </header>
+  </section>
   
   <section class="about" id="about">
     <h2 class="heading">ABOUT THIS PRODUCT</h2>
@@ -73,7 +73,6 @@
   
   </section>
 
-  </body>
-  
+</div>  
 
 @endsection
