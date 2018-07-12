@@ -40,6 +40,7 @@ class GoalsController extends Controller
     
      public function store(Request $request)
     {
+        if (\Auth::check()) {
         $user = \Auth::user();
         
         //長くなってしまった申し訳ない。工夫は考えます
@@ -105,6 +106,39 @@ class GoalsController extends Controller
         }
         
         return view('goals.template', $data);
+        }
+    }
+    
+    public function review()
+    {
+        if (\Auth::check()) {
+            $user = \Auth::user();
+            $query = Goal::query();
+            $latest = \DB::table('goals')->where('user_id', $user->id)->max('created_at');
+            $goals = $query->where('user_id', $user->id)->where('created_at', $latest)->get();
+            
+            return view('goals.review', [
+                'goals' => $goals,
+            ]);
+        }
+    }
+
+    public function reviewed(Request $request)
+    {
+        $this->validate($request, [
+            'rate.*' => 'required|numeric',
+        ]);
+        
+        foreach($request['rate'] as $key => $rate){
+            $id = $request['id'][$key];
+            
+            $goal = Goal::find($id);
+            $goal->rate = $rate;    // add
+            $goal->save();
+         
+        }
+        
+        return redirect('/');
     }
     
      public function destroy($id)
