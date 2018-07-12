@@ -13,11 +13,11 @@
             <div class="collapse navbar-collapse navbar_original" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
-                        <li>
-                            <a href= "{{ route('users.index')}}" class="jet">
-                            Users
-                            </a>
-                        </li>
+                        <!--<li>-->
+                        <!--    <a href= "{{ route('users.index')}}" class="jet">-->
+                        <!--    Users-->
+                        <!--    </a>-->
+                        <!--</li>-->
                         <li>
                             <a href= "{{ route('goals.search')}}" class="jet">
                                 <span class = "glyphicon glyphicon-search" area-hidden="true"></span>
