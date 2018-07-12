@@ -13,12 +13,14 @@
             <div class="collapse navbar-collapse navbar_original" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
+
+                        <!--<li>-->
+                        <!--    <a href= "{{ route('users.index')}}" class="jet">-->
+                        <!--    Users-->
+                        <!--    </a>-->
+                        <!--</li>-->
                         <li>
-                            <a href= "{{ route('users.index')}}" class="jet">
-                            Users
-                            </a>
-                        </li>
-                        <li>
+
                             <a href= "{{ route('goals.search')}}" class="jet">
                                 <span class = "glyphicon glyphicon-search" area-hidden="true"></span>
                                 search for Goals
@@ -31,15 +33,13 @@
                             </a>
                         </li>
                         
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle jet" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
-                                Ranking
-                                <span class="caret"></span>
+
+                        <li>
+                            <a href="{{ route('ranking.good') }}" class="jet">
+                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                Keeps
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{{ route('ranking.good') }}" >Good Ranking</a></li>
-                            </ul>
+
                         </li>
                         
                         <li class="dropdown">
