@@ -40,13 +40,13 @@
 			                backgroundColor: color(colorSet.red).alpha(0.5).rgbString(),
 		           	        borderColor: colorSet.red,
 			                pointBackgroundColor: colorSet.red,
-			                data: ['avg_health' ,'avg_work','avg_study','avg_private' ,'avg_communication' ]
+			                data: ['$avg_health','$avg_work','$avg_study','$avg_private','$avg_communication' ]
 	            	},{
 		                	label: "this week",
 			                backgroundColor: color(colorSet.blue).alpha(0.5).rgbString(),
 			                borderColor: colorSet.blue,
 			                pointBackgroundColor: colorSet.blue,
-			                data: [100, 90, 80, 70, 60]
+			                data: ['$avg_health','$avg_work','$avg_study','$avg_private','$avg_communication']
 	              	},]
 	                },
                         	options: {
