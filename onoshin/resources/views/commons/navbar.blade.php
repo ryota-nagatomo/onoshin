@@ -31,15 +31,11 @@
                             </a>
                         </li>
                         
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle jet" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
-                                Ranking
-                                <span class="caret"></span>
+                        <li>
+                            <a href="{{ route('ranking.good') }}" class="jet">
+                                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                Keeps
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{{ route('ranking.good') }}" >Good Ranking</a></li>
-                            </ul>
                         </li>
                         
                         <li class="dropdown">

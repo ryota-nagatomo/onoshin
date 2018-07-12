@@ -104,6 +104,22 @@ a.jet {
     -moz-box-shadow: 5px 5px 10px #000;
 }
 
+.ranking-box{
+    height:600px;
+    overflow-y: scroll;
+    box-shadow: 5px 5px 10px #000;
+    -webkit-box-shadow: 5px 5px 10px #000;
+    -moz-box-shadow: 5px 5px 10px #000;
+}
+
+.search-box{
+    height:400px;
+    overflow-y: scroll;
+    box-shadow: 5px 5px 10px #000;
+    -webkit-box-shadow: 5px 5px 10px #000;
+    -moz-box-shadow: 5px 5px 10px #000;
+}
+
 /*登録フォーム複数用*/
 /*全体*/
 .hidden_box {

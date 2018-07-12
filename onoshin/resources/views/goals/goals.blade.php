@@ -51,13 +51,6 @@
                     </div>
                 @endif
             </div>
-            <div>
-                @if (isset($goal->count))
-                    <div class="panel-footer">
-                        <p class="text-center">{{ $key+1 }}位: {{ $goal->count}} Good</p>
-                    </div>
-                @endif
-            </div>
         </div>
     </li>
 </ul>
