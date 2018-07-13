@@ -109,12 +109,9 @@ class GoalsController extends Controller
             $query = Goal::query();
             $latest = \DB::table('goals')->where('user_id', $user->id)->max('created_at');
             $goals = $query->where('user_id', $user->id)->where('created_at', $latest)->get();
-            $sub = \DB::table('goals')->selectRaw('AVG(rate) average, WEEK(created_at) week')->where('category', 3)->where('user_id', $user->id)->orderBy('week', 'DESC')->groupBy('week')->take(2)->get();
-        
-            
+             
             return view('goals.review', [
                 'goals' => $goals,
-                'sub' => $sub,
             ]);
         }
     }
