@@ -25,11 +25,6 @@
                          	grey: 'rgb(201, 203, 207)'
                     };
                     
-                    var avg_study = {!! json_encode($avg_study) !!};
-                    var avg_health = {!! json_encode($avg_health) !!};
-                    var avg_communication = {!! json_encode($avg_communication) !!};
-                    var avg_work = {!! json_encode($avg_work) !!};
-                    var avg_private = {!! json_encode($avg_private) !!};
                     
                     
                     // 色のRGB変換
@@ -47,20 +42,13 @@
 			                backgroundColor: color(colorSet.red).alpha(0.5).rgbString(),
 		           	        borderColor: colorSet.red,
 			                pointBackgroundColor: colorSet.red,
-
-			                data: ['$avg_health','$avg_work','$avg_study','$avg_private','$avg_communication' ]
-			                
-			                data: [10 ,10, 10, 10, 10]
-
+			                data: [20, 20, 20, 20, 20]
 	            	},{
 		                	label: "this week",
 			                backgroundColor: color(colorSet.blue).alpha(0.5).rgbString(),
 			                borderColor: colorSet.blue,
 			                pointBackgroundColor: colorSet.blue,
-
-			                data: ['$avg_health','$avg_work','$avg_study','$avg_private','$avg_communication']
-
-			                data: [avg_health, avg_work, avg_study, avg_private, avg_communication]
+			                data: [10, 10, 10, 10, 10]
 
 	              	},]
 	                },

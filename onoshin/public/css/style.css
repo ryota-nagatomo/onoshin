@@ -204,7 +204,7 @@ a:hover {
 }
 
 
-/*ふたつめ*/
+/*ふたつめ! */
 
 
 .top {
@@ -263,6 +263,14 @@ a:hover {
 .button-showy {
   background-color: #D29E04;
 }
+/*レビューテンプレートのページのボタン*/
+.button-showw{
+ background-color: #f3bf88; 
+}
+.button-showww{
+ background-color:#a8c97f; 
+}
+
 .button-ghost {
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.15);

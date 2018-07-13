@@ -123,7 +123,10 @@ class User extends Authenticatable
     }
     
     public function avg($keyword, $userId){
-        $sub = \DB::table('goals')->where('category',$keyword)->where('user_id', $userId)->take(5)->avg('rate');
+        $sub = \DB::table('goals')->selectRaw('AVG(rate) average, WEEK(created_at) week')->where('category', $keyword)->where('user_id', $userId)->orderBy('week', 'DESC')->groupBy('week')->take(2)->get();
         return $sub;
     }
+            
+            
+    
 }
