@@ -1,4 +1,4 @@
-    <div class="panel-body index-box">
+    <div class="panel-body search-box">
         <table class="table table-hover">
 		    <thead>
 		        <tr>
@@ -19,7 +19,9 @@
                     <td>{{ $goal->content }}</td>
                     <td>{{ $goal->rate }}%</td>
                     <td>{{ $date }}</td>
+                    @if (Auth::user()->id != $goal->user_id)
                     <td>@include('good_user.good_button')</td>
+                    @endif
                     @if (Auth::user()->id == $goal->user_id)
                     <td>
                         {!! Form::open(['route' => ['goals.destroy', $goal->id], 'method' => 'delete']) !!}
