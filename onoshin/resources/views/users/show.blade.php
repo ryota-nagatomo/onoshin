@@ -6,6 +6,8 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{ $user->name }}</h3>
+                    <!--今は仮おき-->
+                    <a href="{{ route('goals.review') }}" class="jet">review</a> 
                 </div>
                 <div class="panel-body">
                    <!-- チャート描画キャンバス -->
@@ -22,9 +24,14 @@
                          	purple: 'rgb(153, 102, 255)',
                          	grey: 'rgb(201, 203, 207)'
                     };
-
                     
-
+                    var avg_study = {!! json_encode($avg_study) !!};
+                    var avg_health = {!! json_encode($avg_health) !!};
+                    var avg_communication = {!! json_encode($avg_communication) !!};
+                    var avg_work = {!! json_encode($avg_work) !!};
+                    var avg_private = {!! json_encode($avg_private) !!};
+                    
+                    
                     // 色のRGB変換
                     var color = Chart.helpers.color;
 
@@ -40,13 +47,21 @@
 			                backgroundColor: color(colorSet.red).alpha(0.5).rgbString(),
 		           	        borderColor: colorSet.red,
 			                pointBackgroundColor: colorSet.red,
+
 			                data: ['$avg_health','$avg_work','$avg_study','$avg_private','$avg_communication' ]
+			                
+			                data: [10 ,10, 10, 10, 10]
+
 	            	},{
 		                	label: "this week",
 			                backgroundColor: color(colorSet.blue).alpha(0.5).rgbString(),
 			                borderColor: colorSet.blue,
 			                pointBackgroundColor: colorSet.blue,
+
 			                data: ['$avg_health','$avg_work','$avg_study','$avg_private','$avg_communication']
+
+			                data: [avg_health, avg_work, avg_study, avg_private, avg_communication]
+
 	              	},]
 	                },
                         	options: {
@@ -95,11 +110,12 @@
             @include('user_follow.follow_button', ['user' => $user])
         </aside>
         <div class="col-xs-8">
-            <ul class="nav nav-tabs nav-justified">
-                <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">Smart Goals</a></li>
-                <li role="presentation" class="{{ Request::is('users/*/followings') ? 'active' : '' }}"><a href="{{ route('users.followings', ['id' => $user->id]) }}">Followings <span class="badge">{{ $count_followings }}</span></a></li>
-                <li role="presentation" class="{{ Request::is('users/*/followers') ? 'active' : '' }}"><a href="{{ route('users.followers', ['id' => $user->id]) }}">Followers <span class="badge">{{ $count_followers }}</span></a></li>
-            </ul>
+        	<!--follow follower function-->
+         <!--   <ul class="nav nav-tabs nav-justified">-->
+         <!--       <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">Smart Goals</a></li>-->
+         <!--       <li role="presentation" class="{{ Request::is('users/*/followings') ? 'active' : '' }}"><a href="{{ route('users.followings', ['id' => $user->id]) }}">Followings <span class="badge">{{ $count_followings }}</span></a></li>-->
+         <!--       <li role="presentation" class="{{ Request::is('users/*/followers') ? 'active' : '' }}"><a href="{{ route('users.followers', ['id' => $user->id]) }}">Followers <span class="badge">{{ $count_followers }}</span></a></li>-->
+         <!--   </ul>-->
             @if (count($health)+count($communication)+count($private)+count($study)+count($work) != 0)
                 @include('goals.goals')
             @endif

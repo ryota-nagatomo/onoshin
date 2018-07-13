@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class='page_title'>
+        <h1>Goals Setting</h1>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
@@ -9,10 +12,6 @@
                         <div class="form-group row">
                             <span class="col-xs-2">{!! Form::label('content', 'Smart Goal:') !!}</span>
                             <span class="col-xs-10">{!! Form::text('content', old('content'), ['class' => 'form-control','placeholder' => 'Smart Goalを入力']) !!}</span>
-                        </div>
-                        <div class="form-group row">
-                             <span class="col-xs-2">{!! Form::label('rate', 'Acheivement Rate (%):') !!}</span>
-                            <span class="col-xs-10">{!! Form::text('rate', old('rate'), ['class' => 'form-control','placeholder' => '半角数字を入力']) !!}</span>
                         </div>
                         <div class="form-group row">
                              <span class="col-xs-2">{!! Form::label('category', 'Category:') !!}</span>
@@ -24,6 +23,7 @@
                                 '3' => 'Health',
                                 '4' =>'Work'], null, ['class' => 'form-control'])!!}      </span>
                         </div>
+                        
                         <div class="hidden_box">
                             <label for="label1" class="hidden_box_label">二個目の目標の登録</label>
                             <input type="checkbox" id="label1" class="hidden_box_input" />
@@ -33,10 +33,6 @@
                                 <div class="form-group row">
                                     <span class="col-xs-2">{!! Form::label('content2', 'Smart Goal:') !!}</span>
                                     <span class="col-xs-10">{!! Form::text('content2', old('content2'), ['class' => 'form-control','placeholder' => 'Smart Goalを入力']) !!}</span>
-                                </div>
-                                <div class="form-group row">
-                                    <span class="col-xs-2">{!! Form::label('rate2', 'Achievement rate (%):') !!}</span>
-                                    <span class="col-xs-10">{!! Form::text('rate2', old('rate2'), ['class' => 'form-control','placeholder' => '半角数字を入力']) !!}</span>
                                 </div>
                                 <div class="form-group row">
                                     <span class="col-xs-2">{!! Form::label('category2', 'Category:') !!}</span>
@@ -50,6 +46,7 @@
                                 </div>
                                 <!--ここまで-->
                             </div>
+                            
                             <div class="hidden_box">
                                 <label for="label2" class="hidden_box_label">三個目の目標の登録</label>
                                 <input type="checkbox" id="label2" class="hidden_box_input" />
@@ -59,10 +56,6 @@
                                     <div class="form-group row">
                                         <span class="col-xs-2">{!! Form::label('content3', 'Smart Goal:') !!}</span>
                                         <span class="col-xs-10">{!! Form::text('content3', old('content3'), ['class' => 'form-control','placeholder' => 'Smart Goalを入力']) !!}</span>
-                                    </div>
-                                    <div class="form-group row">
-                                        <span class="col-xs-2">{!! Form::label('rate3', 'Achievement rate (%):') !!}</span>
-                                        <span class="col-xs-10">{!! Form::text('rate3', old('rate3'), ['class' => 'form-control','placeholder' => '半角数字を入力']) !!}</span>
                                     </div>
                                     <div class="form-group row">
                                         <span class="col-xs-2">{!! Form::label('category3', 'Category:') !!}</span>

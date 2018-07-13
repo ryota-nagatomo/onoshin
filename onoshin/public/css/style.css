@@ -1,29 +1,31 @@
 @charset "utf-8";
 
-/* body */
+ body 
 body {
-    background: #f2f2f2;
+    background-color: #f2f2f2;
+    margin: 0;
 }
 footer {
     margin-top: 40px;
+    
 }
 
-/* navbar */
+ navbar 
 .navbar {
-    background-color: #fff;
+    background-color: #f6ae54;
 }
 .navbar-header img {
     margin-top: 5px;
     height: 40px;
 }
 
-/* cover */
+ cover 
 .cover {
     margin-top: -20px;
     margin-bottom: 20px;
     width: 100%;
     height: 1000px;
-    background: url("/images/images.jpg") center center no-repeat;
+    background: url("/images/logo2.jpg") center center no-repeat;
     background-size: cover;
 }
 .cover .cover-inner {
@@ -48,10 +50,10 @@ footer {
     font-weight: bold;
     letter-spacing: 0.08em;
     background:black;
-    /*box-shadow: 0px 0px 0px 5px #FFCC99;*/
+    box-shadow: 0px 0px 0px 5px #FFCC99;
    
-    /*border-radius: 35px;*/
-  font-family: 'Constantia',sans-serif;
+    border-radius: 35px;
+    font-family: 'Constantia',sans-serif;
 }
 .btn-original{
     background:none;
@@ -59,13 +61,11 @@ footer {
      
 }
 
-
 .navbar-original{
     background:black;
-    color: white;
+    color: #fac559;
     font-size: large;
     font-weight: bold;
-    
 }
 
 a.jet {  
@@ -103,6 +103,22 @@ a.jet {
     -moz-box-shadow: 5px 5px 10px #000;
 }
 
+.ranking-box{
+    height:600px;
+    overflow-y: scroll;
+    box-shadow: 5px 5px 10px #000;
+    -webkit-box-shadow: 5px 5px 10px #000;
+    -moz-box-shadow: 5px 5px 10px #000;
+}
+
+.search-box{
+    height:400px;
+    overflow-y: scroll;
+    box-shadow: 5px 5px 10px #000;
+    -webkit-box-shadow: 5px 5px 10px #000;
+    -moz-box-shadow: 5px 5px 10px #000;
+}
+
 /*登録フォーム複数用*/
 /*全体*/
 .hidden_box {
@@ -116,11 +132,12 @@ a.jet {
     font-weight: bold;
     border: solid 2px black;
     cursor :pointer;
+    background-color: #FFF;
 }
 
 /*ボタンホバー時*/
 .hidden_box_label:hover {
-    background: #efefef;
+    background: #eae1cf;
 }
 
 /*チェックは見えなくする*/
@@ -142,4 +159,290 @@ a.jet {
     padding: 10px 0;
     height: auto;
     opacity: 1;
+}
+
+
+.registration{
+     background: #fff;
+}
+
+.page_title
+{
+    font-family:"Constantia","ＭＳ 明朝",serif;
+    font-weight:bolder;
+    text-align:center;
+}
+
+
+/*ここらへんからIsseiの教えてくれたやつ*/
+
+
+
+.main-top,
+.about,
+.skills,
+.contact{
+  display: block;
+}
+
+
+
+a {
+  background-color: transparent;
+}
+
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+
+.site-title {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+
+/*ふたつめ*/
+
+
+.top {
+ background: url("/images/images2.jpg") center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: 'Constantia',sans-serif;
+  margin-top: -20px;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
+
+/* --------------------------------
+ * parts
+ * -------------------------------- */
+.heading {
+  position: relative;
+  display: inline-block;
+  margin: 30px 0 15px;
+  padding-bottom: 15px;
+  letter-spacing: 2px;
+  font-size: 4rem;
+}
+.heading::before,
+.heading::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #999;
+}
+.heading::before {
+  bottom: 5px;
+}
+.button {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #afa58d;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+.button:hover {
+  opacity: 0.9;
+}
+.button-showy {
+  background-color: #D29E04;
+}
+.button-ghost {
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* --------------------------------
+ * header
+ * -------------------------------- */
+.main-top {
+  padding: 170px 30px 80px;
+}
+.site-title-sub {
+  margin: 0 0 30px;
+  letter-spacing: 1px;
+  font-size: 2.2rem;
+}
+.site-title-sub::before,
+.site-title-sub::after {
+  content: '';
+  display: inline-block;
+  width: 140px;
+  height: 2px;
+  margin: 0 30px;
+  background-color: #fff;
+  vertical-align: middle;
+}
+.site-title {
+  margin: 50px 0 40px;
+  font-size: 7.6rem;
+}
+.site-description {
+  margin-bottom: 50px;
+  color: #888;
+  font-size: 1.6rem;
+}
+.buttons .button {
+  margin: 10px;
+}
+
+
+/* --------------------------------
+ * about
+* -------------------------------- */
+.about {
+  padding: 80px 30px;
+  background-color:#eae8e1;
+  color: #333;
+}
+.about-text {
+  margin: 30px 0;
+  line-height: 2.5;
+  font-size: 20px;
+  font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Constantia',sans-serif;
+  font-weight: bold;
+}
+
+
+
+/* --------------------------------
+ * skills
+ * -------------------------------- */
+.skills {
+  padding: 80px 0;
+  background-color:#eee9e6;
+  color: #333;
+   font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Constantia',sans-serif;
+  font-weight: bold;
+}
+.skills-wrapper {
+  display: table;
+  width: 80%;
+  margin: 50px auto 0;
+  table-layout: fixed;
+}
+.skill-box {
+  display: table-cell;
+}
+.skill-icon {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+  border: 4px solid;
+  border-radius: 50%;
+  color: #f1b400;
+  font-size: 8rem;
+  line-height: 142px;
+}
+.skill-title {
+  margin: 0 20px 20px;
+  font-size: 2rem;
+}
+.skill-text {
+  margin: 0 20px;
+  line-height: 2;
+}
+
+
+/* --------------------------------
+ * contact
+ * -------------------------------- */
+.contact {
+  padding: 80px 0 150px;
+}
+.contact-text{
+   color: #fff ;
+   font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Constantia',sans-serif;
+  font-weight: bold;
+  font-size:20px;
+}
+
+
+
+/* --------------------------------
+ * smart phone
+ * -------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    background-image: none;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 1.3rem;
+  }
+  .heading {
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+  .button:hover {
+    opacity: 1;
+  }
+
+  /* --- header --- */
+  .main-top {
+    padding-top: 60px;
+  }
+  .site-title-sub {
+    font-size: 1.7rem;
+  }
+  .site-title-sub::before,
+  .site-title-sub::after {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+  .site-title {
+    margin-top: 35px;
+    font-size: 5rem;
+  }
+
+  /* --- about --- */
+  .about-text {
+    line-height: 1.8;
+  }
+
+ 
+
+  /* --- skills --- */
+  .skills-wrapper,
+  .skill-box {
+    display: block;
+  }
+  .skill-box {
+    margin: 40px auto;
+  }
+  .skill-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 5rem;
+    line-height: 92px;
+  }
+  .skill-text {
+    margin: 0;
+  }
+
+  /* --- contact --- */
+  .contact {
+    padding-bottom: 80px;
+  }
+  
+  
 }

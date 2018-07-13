@@ -1,3 +1,5 @@
-<footer>
-    <div class="text-center text-muted">© 2018 チームきりんさん.</div>
+<footer class="text-center footer">
+  <div class="container">
+    <p class="text-muted">©チームきりんさん.</p>
+  </div>
 </footer>
