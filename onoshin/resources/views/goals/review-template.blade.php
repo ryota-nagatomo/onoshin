@@ -40,12 +40,17 @@
                         ?>
                     </h4>
                 </div>
-                <div>
-                <a href="{{ route('goals.create') }}" class="jet">
-                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                add Goals
-                </a>
-                </div>
+                 <div class="buttons">
+                      <a class="button button-showw" href="{{ route('goals.create') }}">
+                      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                      add Goals
+                      </a>
+               
+                     <a class="button button-showww" href= "{{ route('goals.search')}}" >
+                     <span class = "glyphicon glyphicon-search" area-hidden="true"></span>
+                     search for Goals
+                     </a>
+                </div>            
             </div>
         </div>
     </div>
