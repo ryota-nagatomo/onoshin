@@ -25,12 +25,17 @@
                          	grey: 'rgb(201, 203, 207)'
                     };
                     
-                    var avg_study = {!! json_encode($avg_study) !!};
-                    var avg_health = {!! json_encode($avg_health) !!};
-                    var avg_communication = {!! json_encode($avg_communication) !!};
-                    var avg_work = {!! json_encode($avg_work) !!};
-                    var avg_private = {!! json_encode($avg_private) !!};
+                    var avg_study_this = {!! json_encode($avg_study[0][average]) !!};
+                    var avg_health_this = {!! json_encode($avg_health[0][average]) !!};
+                    var avg_communication_this = {!! json_encode($avg_communication[0][average]) !!};
+                    var avg_work_this = {!! json_encode($avg_work[0][average]) !!};
+                    var avg_private_this = {!! json_encode($avg_private[0][average]) !!};
                     
+                    var avg_study_last = {!! json_encode($avg_study[1][average]) !!};
+                    var avg_health_last = {!! json_encode($avg_health[1][average]) !!};
+                    var avg_communication_last = {!! json_encode($avg_communication[1][average]) !!};
+                    var avg_work_last = {!! json_encode($avg_work[1][average]) !!};
+                    var avg_private_last = {!! json_encode($avg_private[1][average]) !!};
                     
                     // 色のRGB変換
                     var color = Chart.helpers.color;
@@ -47,13 +52,13 @@
 			                backgroundColor: color(colorSet.red).alpha(0.5).rgbString(),
 		           	        borderColor: colorSet.red,
 			                pointBackgroundColor: colorSet.red,
-			                data: [10 ,10, 10, 10, 10]
+			                data: [avg_health_last, avg_work_last, avg_study_last, avg_private_last, avg_communication_last]
 	            	},{
 		                	label: "this week",
 			                backgroundColor: color(colorSet.blue).alpha(0.5).rgbString(),
 			                borderColor: colorSet.blue,
 			                pointBackgroundColor: colorSet.blue,
-			                data: [avg_health, avg_work, avg_study, avg_private, avg_communication]
+			                data: [avg_health_this, avg_work_this, avg_study_this, avg_private_this, avg_communication_this]
 	              	},]
 	                },
                         	options: {
