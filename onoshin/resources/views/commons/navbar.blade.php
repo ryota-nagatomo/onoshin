@@ -27,9 +27,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('goals.create') }}" class="jet">
+                            <a href="{{ route('goals.review') }}" class="jet">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                add Goals
+                                Goals (review&add)
                             </a>
                         </li>
                         
