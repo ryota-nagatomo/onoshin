@@ -36,5 +36,7 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::resource('goals', 'GoalsController', ['only' => ['create','store', 'destroy']]);
-    Route::get('goals', 'GoalsController@search')->name('goals.search');
+    Route::get('goals/review', 'GoalsController@review')->name('goals.review');
+    Route::post('goals/reviewed', 'GoalsController@reviewed')->name('goals.reviewed');
+    Route::get('goals/search', 'GoalsController@search')->name('goals.search');
 });

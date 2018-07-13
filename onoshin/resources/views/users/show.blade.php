@@ -6,6 +6,8 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{ $user->name }}</h3>
+                    <!--今は仮おき-->
+                    <a href="{{ route('goals.review') }}" class="jet">review</a> 
                 </div>
                 <div class="panel-body">
                    <!-- チャート描画キャンバス -->
