@@ -30,5 +30,4 @@
             </div>
         </div>
     </div>
-    <?php print($sub); ?>
 @endsection
