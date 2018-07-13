@@ -40,8 +40,6 @@
                         ?>
                     </h4>
                 </div>
-                
-                
                  <div class="buttons">
                       <a class="button button-showw" href="{{ route('goals.create') }}">
                       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
