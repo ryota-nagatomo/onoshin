@@ -18,7 +18,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
     </head>
-    <body style="background-color: #f2f2f2">
+    <body style="background-color: #fff9f4">
         @include('commons.navbar')
 
         @yield('cover')
