@@ -2,7 +2,7 @@
 
 @section('content')
     <div class='page_title'>
-        <h1>Goals Setting</h1>
+        <h1>Smart Goals Setting</h1>
     </div>
     <div class="container">
         <div class="row">
@@ -23,7 +23,10 @@
                                 '3' => 'Health',
                                 '4' =>'Work'], null, ['class' => 'form-control'])!!}      </span>
                         </div>
-                        
+                        <div class="form-group row">
+                            <span class="col-xs-2">{!! Form::label('why', 'Why:') !!}</span>
+                            <span class="col-xs-10">{!! Form::text('why', old('why'), ['class' => 'form-control','placeholder' => 'Reasonを入力']) !!}</span>
+                        </div>
                         <div class="hidden_box">
                             <label for="label1" class="hidden_box_label">二個目の目標の登録</label>
                             <input type="checkbox" id="label1" class="hidden_box_input" />
@@ -43,6 +46,10 @@
                                         '2' => 'Communication',
                                         '3' => 'Health',
                                         '4' =>'Work'], null, ['class' => 'form-control'])!!}</span>
+                                </div>
+                                <div class="form-group row">
+                                    <span class="col-xs-2">{!! Form::label('why2', 'Why:') !!}</span>
+                                    <span class="col-xs-10">{!! Form::text('why2', old('why2'), ['class' => 'form-control','placeholder' => 'Reasonを入力']) !!}</span>
                                 </div>
                                 <!--ここまで-->
                             </div>
@@ -66,6 +73,10 @@
                                             '2' => 'Commmunication',
                                             '3' => 'Health',
                                             '4' =>'Work'], null, ['class' => 'form-control'])!!}</span>
+                                    </div>
+                                    <div class="form-group row">
+                                        <span class="col-xs-2">{!! Form::label('why3', 'Why:') !!}</span>
+                                        <span class="col-xs-10">{!! Form::text('why3', old('why3'), ['class' => 'form-control','placeholder' => 'Reasonを入力']) !!}</span>
                                     </div>
                                     <!--ここまで-->
                                 </div>

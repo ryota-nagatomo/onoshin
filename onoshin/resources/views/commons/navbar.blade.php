@@ -19,21 +19,34 @@
                         <!--    Users-->
                         <!--    </a>-->
                         <!--</li>-->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle jet" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                Goals (Review&Add)
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{ route('goals.review') }}" class="jet">
+                                    <span aria-hidden="true"></span>
+                                    Review
+                                    </a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="{{ route('goals.create') }}" class="jet">
+                                    <span aria-hidden="true"></span>
+                                    Add
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                         <li>
-
                             <a href= "{{ route('goals.search')}}" class="jet">
                                 <span class = "glyphicon glyphicon-search" area-hidden="true"></span>
-                                search for Goals
+                                Search for Goals
                             </a>
                         </li>
-                        <li>
-                            <a href="{{ route('goals.review') }}" class="jet">
-                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                Goals (review&add)
-                            </a>
-                        </li>
-                        
-
                         <li>
                             <a href="{{ route('ranking.good') }}" class="jet">
                                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
