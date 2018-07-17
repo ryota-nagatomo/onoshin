@@ -9,12 +9,16 @@
                     <h3>Copy your Smart Goals below & paste it on your Daily Report</h3>
                         <div class="goals_template">
                             <?php foreach($goals as $key => $goal){ ?>
-                            <p>{{ $key+1 }}. Goal: {{$goal->content}}<br/>
-                            ・Accomplishment: {{$goal->rate}}%<br/>
-                            ・Review: <br/>
-                            ・Next Steps: <br/>
-                            <br/>
-                            <?php } ?>
+                            <p id='targetID'>{{ $key+1 }}. Goal: {{$goal->content}}<br/>
+                                ・Accomplishment: {{$goal->rate}}%<br/>
+                                ・Review: <br/>
+                                ・Next Steps: <br/>
+
+                                <?php } ?>
+                            </p>
+                            
+                            <button id='btnCopy' class="btn"><span class='glyphicon glyphicon-copy'>copy</span></button>
+                            
                         </div>
                     <h4><?php 
                         /*現在の日付の曜日の番号を出力する*/
@@ -54,4 +58,25 @@
             </div>
         </div>
     </div>
+    
+    <!--コピーのscript-->
+    <script>
+        document.querySelector('#btnCopy').addEventListener("click", function(){
+          var element = document.querySelector('#targetID');
+          var selection = window.getSelection();
+          var range = document.createRange();
+          range.selectNodeContents(element);
+          selection.removeAllRanges();
+          selection.addRange(range);
+          //console.log('選択された文字列: ', selection.toString());
+          var succeeded = document.execCommand('copy');
+          if (succeeded) {
+              alert('コピーが成功しました！');
+          } else {
+              alert('コピーが失敗しました!');
+          }
+          selection.removeAllRanges();
+        
+        });
+    </script>
 @endsection('content')
