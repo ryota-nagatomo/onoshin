@@ -122,11 +122,65 @@ class User extends Authenticatable
     return $this->followings()->where('follow_id', $userId)->exists();
     }
     
-    public function avg($keyword, $userId){
-        $sub = \DB::table('goals')->selectRaw('AVG(rate) average, WEEK(created_at) week')->where('category', $keyword)->where('user_id', $userId)->orderBy('week', 'DESC')->groupBy('week')->take(2)->get();
+    public function get_week_date($ymd) {
+        // 日曜日始まり
+        $w = date("w",strtotime($ymd));
+        $beginning_week_date =
+            date('Y-m-d', strtotime("-{$w} day", strtotime($ymd)));
+        return $beginning_week_date;
+    }
+    
+    public function avg_this($category, $userId){
+        $today = date("Y-m-d H:i:s"); //今日の日付
+        $weekday = $this->get_week_date($today); //週初日を出す
+        
+        $exist = \DB::table('goals')->selectRaw('*')->where('category', $category)->where('user_id', $userId)->whereBetween('created_at', [$weekday, $today])->exists();
+        //今週のデータがあるかどうか
+            if($exist){
+                $temp = \DB::table('goals')->selectRaw('AVG(rate) average, WEEK(created_at) week')->where('category', $category)->where('user_id', $userId)->orderBy('week', 'DESC')->groupBy('week')->first(); 
+            //あったら
+                $sub = $temp->average;
+            }
+            elseif(!$exist){
+                $sub = 0;
+            }
         return $sub;
     }
+    
+    public function avg_last($category, $userId){
+        $today = date("Y-m-d H:i:s"); //今日の日付
+        $weekday = $this->get_week_date($today); //週初日を出す
+        $last_week_day = date('Y-m-d', strtotime("$weekday - 1 day"));
+        //先週の末日
+        $last_begining_weekday = $this->get_week_date($last_week_day); //先週の週初日を出す
+        
+        $exist_this = \DB::table('goals')->selectRaw('*')->where('category', $category)->where('user_id', $userId)->whereBetween('created_at', [$weekday, $today])->exists();
+        $exist_last = \DB::table('goals')->selectRaw('*')->where('category', $category)->where('user_id', $userId)->whereBetween('created_at', [$last_begining_weekday, $last_week_day])->exists();
+        
+        //先週のデータがあるかどうか
+            if($exist_last){
+                //さらに今週のデータがあるかどうか
+                if($exist_this){
+                    //あったら
+                    $temp = \DB::table('goals')->selectRaw('AVG(rate) average, WEEK(created_at) week')->where('category', $category)->where('user_id', $userId)->orderBy('week', 'DESC')->groupBy('week')->take(2)->get();
+                    $sub = $temp[1]->average;    
+                }
+                
+                else{
+                    //今週のデータがなかったら
+                    $temp = \DB::table('goals')->selectRaw('AVG(rate) average, WEEK(created_at) week')->where('category', $category)->where('user_id', $userId)->orderBy('week', 'DESC')->groupBy('week')->first();
+                    $sub = $temp->average;
+                }
+            }
             
+            else{
+                //先週のデータなかったら
+                $sub = 0;
+            }
+                
+        return $sub;
+    }       
+    
             
     
 }
