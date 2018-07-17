@@ -452,5 +452,8 @@ a:hover {
     padding-bottom: 80px;
   }
   
+.panel-heading{
+  background-color: black;
+}
   
 }
