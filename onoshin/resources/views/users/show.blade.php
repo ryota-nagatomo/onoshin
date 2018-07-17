@@ -25,6 +25,18 @@
                          	grey: 'rgb(201, 203, 207)'
                     };
                     
+                    var avg_study_this = {!! json_encode($avg_study_this) !!};
+                    var avg_health_this = {!! json_encode($avg_health_this) !!};
+                    var avg_communication_this = {!! json_encode($avg_communication_this) !!};
+                    var avg_work_this = {!! json_encode($avg_work_this) !!};
+                    var avg_private_this = {!! json_encode($avg_private_this) !!};
+                    
+                    var avg_study_last = {!! json_encode($avg_study_last) !!};
+                    var avg_health_last = {!! json_encode($avg_health_last) !!};
+                    var avg_communication_last = {!! json_encode($avg_communication_last) !!};
+                    var avg_work_last = {!! json_encode($avg_work_last) !!};
+                    var avg_private_last = {!! json_encode($avg_private_last) !!};
+
                     
                     
                     // 色のRGB変換
@@ -42,13 +54,13 @@
 			                backgroundColor: color(colorSet.red).alpha(0.5).rgbString(),
 		           	        borderColor: colorSet.red,
 			                pointBackgroundColor: colorSet.red,
-			                data: [20, 20, 20, 20, 20]
+			                data: [avg_health_last, avg_work_last, avg_study_last, avg_private_last, avg_communication_last]
 	            	},{
 		                	label: "this week",
 			                backgroundColor: color(colorSet.blue).alpha(0.5).rgbString(),
 			                borderColor: colorSet.blue,
 			                pointBackgroundColor: colorSet.blue,
-			                data: [10, 10, 10, 10, 10]
+			                data: [avg_health_this, avg_work_this, avg_study_this, avg_private_this, avg_communication_this]
 
 	              	},]
 	                },
@@ -94,6 +106,7 @@
            </script>
 
                 </div>
+
             </div>
            
             @include('user_follow.follow_button', ['user' => $user])
