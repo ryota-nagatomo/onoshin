@@ -2,7 +2,7 @@
 
 @section('content')
     <div class='page_title'>
-        <h1>Search for Goals</h1>
+        <h1>Search for Smart Goals</h1>
     </div>
 
     <div class="search">
