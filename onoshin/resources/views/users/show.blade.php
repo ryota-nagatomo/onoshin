@@ -48,7 +48,7 @@
                     var config = {
                         	type: 'radar',
                          	data: {
-	                       	labels: ["health", "work", "study", "private", "communication"],
+	                       	labels: ["communication", "work", "study", "private", "health"],
 	                 	    datasets: [{
 		                  	label: "last week",
 			                backgroundColor: color(colorSet.red).alpha(0.5).rgbString(),
@@ -106,7 +106,7 @@
            </script>
 
                 </div>
-            
+
             </div>
            
             @include('user_follow.follow_button', ['user' => $user])
