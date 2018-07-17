@@ -36,7 +36,7 @@
                     var config = {
                         	type: 'radar',
                          	data: {
-	                       	labels: ["health", "work", "study", "private", "communication"],
+	                       	labels: ["communication", "work", "study", "private", "health"],
 	                 	    datasets: [{
 		                  	label: "last week",
 			                backgroundColor: color(colorSet.red).alpha(0.5).rgbString(),
@@ -94,21 +94,6 @@
            </script>
 
                 </div>
-                <!--画像の表示部分の分岐です-->
-                <!--<div class="panel panel-default">-->
-                <!--	<div class="panel-body">-->
-                <!--		@if($kinoko < 5)-->
-                <!--		  <img src=""></img>-->
-                		  
-                <!--		  @elseif($kinoko < 10)-->
-                <!--		  <img src=""></img>-->
-                		  
-                <!--		  @else-->
-                <!--		  <img src=""></img>-->
-                		 
-                <!--		@endif-->
-                <!--	</div>-->
-                <!--</div>-->
             </div>
            
             @include('user_follow.follow_button', ['user' => $user])
