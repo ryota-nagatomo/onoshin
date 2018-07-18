@@ -13,33 +13,40 @@
     </div>
   </section>
   
-  <section class="about" id="about">
-    <h2 class="heading">ABOUT THIS PRODUCT</h2>
-    <p class="about-text">
-     みなさんは毎日どのようなSmartGoalを設定していますか？<br>
-  　　毎日違うスマートゴールを考えるのが億劫、同期がどんなゴールを目標にしているのか気になる…<br>
-  　　そんなあなたの悩みを解決するアプリケーション
-    </p>
-    <p class="about-text">
-      このアプリは皆さんの目標設定と目標管理をお手伝いさせていただくツールです。<br>
-      このアプリを使うことで毎日の日報制作が効率的に、また、生産性のある目標を立てることができます。
-    </p>
-  </section>
+  <!--<section class="about" id="about">-->
+    <!--<h2 class="heading">ABOUT THIS PRODUCT</h2>-->
+    <!--<p class="about-text">-->
+    <!-- みなさんは毎日どのようなSmartGoalを設定していますか？<br>-->
+  　　<!--毎日違うスマートゴールを考えるのが億劫、同期がどんなゴールを目標にしているのか気になる…<br>-->
+  　　<!--そんなあなたの悩みを解決するアプリケーション-->
+    <!--</p>-->
+    <!--<p class="about-text">-->
+    <!--  このアプリは皆さんの目標設定と目標管理をお手伝いさせていただくツールです。<br>-->
+    <!--  このアプリを使うことで毎日の日報制作が効率的に、また、生産性のある目標を立てることができます。-->
+    <!--</p>-->
+  <!--</section>-->
 
   <section class="skills">
-    <h2 class="heading">WHAT YOU CAN</h2>
+    <h2 class="heading">HOW TO USE</h2>
+    <h3>まずはスマートゴールを追加しましょう！</h3>
     <div class="skills-wrapper">
       <div class="skill-box">
-        <i class="skill-icon fa fa-lightbulb-o"></i>
+        
         <div class="skill-title">GRAPH</div>
         <p class="skill-text">
           Ⅰ.グラフでわかる達成度<br>
           毎日のSmartGoalの達成度をグラフで確認して<br>
           モチベーションアップ!!
         </p>
+    
       </div>
+      
+       <div class="skill-box">
+        <span class = "glyphicon glyphicon-arrow-right" style="font-size:50px" area-hidden="true">
+        </span>
+       </div>   
+      
       <div class="skill-box">
-        <i class="skill-icon fa fa-paint-brush"></i>
         <div class="skill-title">SEARCH</div>
         <p class="skill-text">
          Ⅱ.自己成長につなげる<br> 
@@ -48,8 +55,11 @@
           
         </p>
       </div>
-      <div class="skill-box">
-        <i class="skill-icon fa fa-code"></i>
+   <div class="skill-box">
+         <span class = "glyphicon glyphicon-arrow-right" style="font-size:50px" area-hidden="true">
+         </span>
+   </div>  
+       
         <div class="skill-title">EFFICIENCY</div>
         <p class="skill-text">
          Ⅲ. 日報作成の効率化<br>

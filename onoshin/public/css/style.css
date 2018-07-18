@@ -337,6 +337,14 @@ a.jet {
 .skill-text {
   margin: 0 20px;
   line-height: 2;
+  font-size:21px;
+}
+
+h3{
+   margin: 0 20px;
+  line-height: 2;
+  font-size:21px;
+  color: red;
 }
 
 
@@ -425,6 +433,10 @@ a.jet {
   
 .panel-heading{
   background-color: black;
+}
+
+.skill-box .arrow{
+  font-size: 100px;
 }
   
 }
