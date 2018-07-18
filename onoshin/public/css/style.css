@@ -423,5 +423,8 @@ a.jet {
     padding-bottom: 80px;
   }
   
+.panel-heading{
+  background-color: black;
+}
   
 }
