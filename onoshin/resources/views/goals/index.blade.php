@@ -5,7 +5,8 @@
 			        <th>日付</th>
 		        	<th>目標</th>
 			        <th>達成率</th>
-	                <th></th>
+	                <th>Keep</th>
+	                <th>Delete</th>
 	            </tr>
 	       </thead>
 	       <tbody>
@@ -15,6 +16,7 @@
                     <td>{{ $date }}</td>
                     <td>{{ $goal->content }}</td>
                     <td>{{ $goal->rate }}%</td>
+                    <td>@include('good_user.good_button')</td>
                     @if (Auth::user()->id == $goal->user_id)
                     <td>
                         {!! Form::open(['route' => ['goals.destroy', $goal->id], 'method' => 'delete']) !!}
