@@ -12,13 +12,18 @@
                             </div>
                             <div class="panel-body">
                                 <div class="goals_template">
-                                    <?php foreach($goals as $key => $goal){ ?>
-                                    <p class="text-left">{{ $key+1 }}. Goal: {{$goal->content}}<br/>
-                                    ・Accomplishment: {{$goal->rate}}%<br/>
-                                    ・Review: {{$reviews[$key]}} <br/>
-                                    ・Next Steps: {{$steps[$key]}} <br/>
-                                    <br/>
-                                    <?php } ?>
+                                    <p class="text-left" id='targetID'>
+                                        <?php foreach($goals as $key => $goal){ ?>
+                                        {{ $key+1 }}. Goal: {{$goal->content}}<br/>
+                                        ・Accomplishment: {{$goal->rate}}%<br/>
+                                        ・Review: {{$reviews[$key]}} <br/>
+                                        ・Next Steps: {{$steps[$key]}} <br/>
+                                        <br/>
+                                        <?php } ?>
+                                    </p>
+                                </div>
+                                <div class='text-right'>
+                                     <button id='btnCopy' class="btn"><span class='glyphicon glyphicon-copy'>copy</span></button>
                                 </div>
                             </div>
                         </div>
@@ -39,4 +44,25 @@
             </div>
         </div>
     </div>
+    
+    <!--コピーのscript-->
+    <script>
+        document.querySelector('#btnCopy').addEventListener("click", function(){
+          var element = document.querySelector('#targetID');
+          var selection = window.getSelection();
+          var range = document.createRange();
+          range.selectNodeContents(element);
+          selection.removeAllRanges();
+          selection.addRange(range);
+          //console.log('選択された文字列: ', selection.toString());
+          var succeeded = document.execCommand('copy');
+          if (succeeded) {
+              alert('コピーが成功しました！');
+          } else {
+              alert('コピーが失敗しました!');
+          }
+          selection.removeAllRanges();
+        
+        });
+    </script>
 @endsection('content')

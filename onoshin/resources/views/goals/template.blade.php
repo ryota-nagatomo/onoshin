@@ -10,24 +10,28 @@
                             <div class="panel-heading">
                                 <h2 class="panel-title">Your Smart Goals</h2>
                             </div>
-                                <div class="panel-body">
-                                    <div class="goals_template">
-                                        <p class="text-left">SMART Goal 1: {{$content}}<br/>
-                                            	Why→ {{$why}}
+                            <div class="panel-body">
+                                <div class="goals_template">
+                                    <p class="text-left" id='targetID'>SMART Goal 1: {{$content}}<br/>
+                                        Why→ {{$why}}
                                         <br/>
                                         <?php if(isset($content2)){ ?>
                                         SMART Goal 2: {{$content2}}<br/>
-                                            	Why→ {{$why2}}
+                                        Why→ {{$why2}}
                                         <br/>
                                         <?php } ?>
                                         <?php if(isset($content3)){ ?>
                                         SMART Goal 3: {{$content3}}<br/>
-                                            	Why→ {{$why3}}
-                                        </p>
+                                        Why→ {{$why3}}
                                         <?php } ?>
-                                    </div>
+                                    </p>
                                 </div>
+                                <div class='text-right'>
+                                     <button id='btnCopy' class="btn"><span class='glyphicon glyphicon-copy'> copy</span></button>
+                                </div>
+                            </div>
                         </div>
+                        
                     <h4><?php 
                         /*現在の日付の曜日の番号を出力する*/
                         $date = date('w');
@@ -55,4 +59,26 @@
             </div>
         </div>
     </div>
+    
+     <!--コピーのscript-->
+    <script>
+        document.querySelector('#btnCopy').addEventListener("click", function(){
+          var element = document.querySelector('#targetID');
+          var selection = window.getSelection();
+          var range = document.createRange();
+          range.selectNodeContents(element);
+          selection.removeAllRanges();
+          selection.addRange(range);
+          //console.log('選択された文字列: ', selection.toString());
+          var succeeded = document.execCommand('copy');
+          if (succeeded) {
+              alert('コピーが成功しました！');
+          } else {
+              alert('コピーが失敗しました!');
+          }
+          selection.removeAllRanges();
+        
+        });
+    </script>
+    
 @endsection('content')
