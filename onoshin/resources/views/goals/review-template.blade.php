@@ -5,6 +5,7 @@
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
                 <div class="text-center">
+                    <h1 class='page_title'>Smart Goals Template</h1>
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h2 class="panel-title">Your Smart Goals</h2>

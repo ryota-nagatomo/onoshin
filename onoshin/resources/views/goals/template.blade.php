@@ -27,7 +27,7 @@
                                     </p>
                                 </div>
                                 <div class='text-right'>
-                                     <button id='btnCopy' class="btn"><span class='glyphicon glyphicon-copy'>copy</span></button>
+                                     <button id='btnCopy' class="btn"><span class='glyphicon glyphicon-copy'> copy</span></button>
                                 </div>
                             </div>
                         </div>
