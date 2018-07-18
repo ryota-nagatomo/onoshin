@@ -97,10 +97,29 @@ class GoalsController extends Controller
         ]); 
             $data += ['content3' => $request->content3,];
         }
+        $why = '';
+        $why2 = '';
+        $why3 = '';
+        
+        if(isset($request->why)){
+            $why = $request->why;
+        }
+        if(isset($request->why2)){
+            $why2 = $request->why2;
+        }
+        if(isset($request->why3)){
+            $why3 = $request->why3;
+        }
+        
+        $data += [
+            'why' => $request->why,
+            'why2' => $request->why2,
+            'why3' => $request->why3,
+            ];
+        }
         
         return view('goals.template', $data);
         }
-    }
     
     public function review()
     {
@@ -125,16 +144,24 @@ class GoalsController extends Controller
         foreach($request['rate'] as $key => $rate){
             $id = $request['id'][$key];
             
+            $review = $request['review'][$key];
+            $step = $request['step'][$key];
+            
             $goal = Goal::find($id);
             $goal->rate = $rate;    // add
             $goal->save();
             
             $goals[] = $goal;
+            
+            $reviews[] = $review;
+            $steps[] = $step;
         }
         
         
         return view('goals.review-template', [
-            'goals' => $goals
+            'goals' => $goals,
+            'reviews' => $reviews,
+            'steps' => $steps,           
             ]);
     }
     
