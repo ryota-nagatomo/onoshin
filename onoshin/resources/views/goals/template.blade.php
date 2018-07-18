@@ -12,23 +12,26 @@
                             </div>
                             <div class="panel-body">
                                 <div class="goals_template">
-                                    <p class="text-left">SMART Goal 1: {{$content}}<br/>
-                                        	Why→ {{$why}}
-                                    <br/>
-                                    <?php if(isset($content2)){ ?>
-                                    SMART Goal 2: {{$content2}}<br/>
-                                        	Why→ {{$why2}}
-                                    <br/>
-                                    <?php } ?>
-                                    <?php if(isset($content3)){ ?>
-                                    SMART Goal 3: {{$content3}}<br/>
-                                        	Why→ {{$why3}}
+                                    <p class="text-left" id='targetID'>SMART Goal 1: {{$content}}<br/>
+                                        Why→ {{$why}}
+                                        <br/>
+                                        <?php if(isset($content2)){ ?>
+                                        SMART Goal 2: {{$content2}}<br/>
+                                        Why→ {{$why2}}
+                                        <br/>
+                                        <?php } ?>
+                                        <?php if(isset($content3)){ ?>
+                                        SMART Goal 3: {{$content3}}<br/>
+                                        Why→ {{$why3}}
+                                        <?php } ?>
                                     </p>
-                                    <?php } ?>
+                                </div>
+                                <div class='text-right'>
+                                     <button id='btnCopy' class="btn"><span class='glyphicon glyphicon-copy'>copy</span></button>
                                 </div>
                             </div>
                         </div>
-                        <button id='btnCopy' class="btn"><span class='glyphicon glyphicon-copy'>copy</span></button>
+                        
                     <h4><?php 
                         /*現在の日付の曜日の番号を出力する*/
                         $date = date('w');
@@ -56,7 +59,8 @@
             </div>
         </div>
     </div>
-    <!--コピーのscript-->
+    
+     <!--コピーのscript-->
     <script>
         document.querySelector('#btnCopy').addEventListener("click", function(){
           var element = document.querySelector('#targetID');
@@ -76,4 +80,5 @@
         
         });
     </script>
+    
 @endsection('content')

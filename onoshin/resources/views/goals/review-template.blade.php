@@ -11,18 +11,20 @@
                             </div>
                             <div class="panel-body">
                                 <div class="goals_template">
-                                    <?php foreach($goals as $key => $goal){ ?>
-                                    <p class="text-left" id='targetID'>{{ $key+1 }}. Goal: {{$goal->content}}<br/>
-                                    ・Accomplishment: {{$goal->rate}}%<br/>
-                                    ・Review: {{$reviews[$key]}} <br/>
-                                    ・Next Steps: {{$steps[$key]}} <br/>
-                                    <br/>
-                                    <?php } ?>
+                                    <p class="text-left" id='targetID'>
+                                        <?php foreach($goals as $key => $goal){ ?>
+                                        {{ $key+1 }}. Goal: {{$goal->content}}<br/>
+                                        ・Accomplishment: {{$goal->rate}}%<br/>
+                                        ・Review: {{$reviews[$key]}} <br/>
+                                        ・Next Steps: {{$steps[$key]}} <br/>
+                                        <br/>
+                                        <?php } ?>
                                     </p>
-                                    <button id='btnCopy' class="btn"><span class='glyphicon glyphicon-copy'>copy</span></button>
+                                </div>
+                                <div class='text-right'>
+                                     <button id='btnCopy' class="btn"><span class='glyphicon glyphicon-copy'>copy</span></button>
                                 </div>
                             </div>
->>>>>>> origin/master
                         </div>
                 </div>
                 <div class=text-center>
