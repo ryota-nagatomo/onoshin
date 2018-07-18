@@ -9,8 +9,7 @@
     <p class="site-title-sub">Welcome to SmartGoals</p>
     <h1 class="site-title">     YOUR GOAL IS...</h1>
     <div class="buttons">
-      <a class="button" href="#about">LEARN MORE</a>
-      <a class="button button-showy" href="#contact">ABOUT US</a>
+      <a class="button button-showy" href="{{ route('signup.get') }}">Start SmartGoals</a>
     </div>
   </section>
   
